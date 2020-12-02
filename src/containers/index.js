@@ -1,5 +1,6 @@
 import {Home, Product, About,Contact} from './views';
 import {MainLayout} from './layouts';
+import {CarouselItem} from './items';
 
 export {
   Home,
@@ -7,5 +8,6 @@ export {
   About,
   MainLayout,
   Contact,
+  CarouselItem,
 }
 
