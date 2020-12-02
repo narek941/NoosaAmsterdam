@@ -1,14 +1,17 @@
 import React from 'react';
-import { AppBar, Toolbar, Button } from '@material-ui/core';
-import { CourseButton } from '../../index';
-import { makeStyles } from '@material-ui/core/styles';
+import { AppBar, Toolbar, TextField } from '@material-ui/core';
+import { HeaderLink,HeaderLogo, TypeLinks} from '../../index';
+import { makeStyles, } from '@material-ui/core/styles';
 import './Header.css';
 import {NavLink as RouterNavLink} from 'react-router-dom';
+import IconButton from '../../../img/IconButton';
+
 
 const useStyles = makeStyles({
   root: {
     background: '#7A7674',
     opacity: '1',
+    fontSize: '19px',
   },
 });
 
@@ -19,24 +22,29 @@ const Header = ({ children, ...props }) => {
     <AppBar className={classes.root} position="static">
       <Toolbar>
         <div>
-          <CourseButton  type='logo' to={"/home"}/>
+          <HeaderLogo  type='logo' to={"/home"}/>
         </div>
 
         <div >
-          <CourseButton type='navigation' to="/product" >
+          <TypeLinks type='navigation' to="/product" >
             product
-        </CourseButton>
-          <CourseButton type='navigation' to="/about">
+        </TypeLinks>
+          <TypeLinks type='navigation' to="/about">
             about
-        </CourseButton>
-          <CourseButton type='navigation' to="/contact">
+        </TypeLinks>
+          <TypeLinks type='navigation' to="/contact">
             contact
-        </CourseButton>
-          <CourseButton>
+        </TypeLinks>
+          <TypeLinks>
             sale
-        </CourseButton>
+        </TypeLinks>
           {children}
         </div>
+        <TextField  label="Search" variant="outlined" />
+        <IconButton type='search' />
+        <IconButton type='basket' />
+        <IconButton type='user' />
+
       </Toolbar>
     </AppBar>
   )

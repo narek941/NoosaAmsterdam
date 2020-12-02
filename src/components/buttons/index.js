@@ -1,3 +1,9 @@
-import CourseButton from './CourseButton';
+import TypeLinks from './TypeLinks';
+import HeaderLogo from './HeaderLogo';
+import NoosaIconButton from './NoosaIconButton';
 
-export default CourseButton;
+export{
+    NoosaIconButton,
+    HeaderLogo,
+    TypeLinks,
+  } 

@@ -1,7 +1,9 @@
-import CourseButton from "./buttons";
+import {TypeLinks, HeaderLogo, NoosaIconButton} from "./buttons";
 import {Header} from "./common";
 
 export{
-  CourseButton,
-  Header
+  TypeLinks,
+  Header,
+  HeaderLogo,
+  NoosaIconButton,
 }
