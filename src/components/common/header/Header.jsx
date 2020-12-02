@@ -1,19 +1,49 @@
 import React from 'react';
 import { AppBar, Toolbar, TextField } from '@material-ui/core';
 import { HeaderLink,HeaderLogo, TypeLinks} from '../../index';
-import { makeStyles, } from '@material-ui/core/styles';
 import './Header.css';
 import {NavLink as RouterNavLink} from 'react-router-dom';
 import IconButton from '../../../img/IconButton';
+import { fade, makeStyles } from '@material-ui/core/styles';
+import InputBase from '@material-ui/core/InputBase';
 
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme)=>({
   root: {
     background: '#7A7674',
     opacity: '1',
     fontSize: '19px',
   },
-});
+  search: {
+    position: 'relative',
+    borderRadius: theme.shape.borderRadius,
+    backgroundColor: fade(theme.palette.common.white, 0.15),
+    '&:hover': {
+      backgroundColor: fade(theme.palette.common.white, 0.25),
+    },
+    marginLeft: 0,
+    width: '100%',
+    [theme.breakpoints.up('sm')]: {
+      marginLeft: theme.spacing(1),
+      width: 'auto',
+    },
+  },
+
+  inputRoot: {
+    color: 'inherit',
+  },
+  inputInput: {
+    padding: theme.spacing(1, 1, 1, 0),
+    // vertical padding + font size from searchIcon
+    paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
+    transition: theme.transitions.create('width'),
+    width: '100%',
+    [theme.breakpoints.up('sm')]: {
+      width: '12ch',
+      '&:focus': {
+        width: '20ch',
+      }, }, },
+}));
 
 const Header = ({ children, ...props }) => {
   const classes = useStyles();
@@ -38,13 +68,20 @@ const Header = ({ children, ...props }) => {
           <TypeLinks>
             sale
         </TypeLinks>
-          {children}
         </div>
-        <TextField  label="Search" variant="outlined" />
+        <InputBase
+              placeholder="Search…"
+              classes={{
+                root: classes.inputRoot,
+                input: classes.inputInput,
+              }}
+              inputProps={{ 'aria-label': 'search' }}
+            />
         <IconButton type='search' />
         <IconButton type='basket' />
-        <IconButton type='user' />
-
+        <IconButton type='user' />    
+        {children}
+ 
       </Toolbar>
     </AppBar>
   )
