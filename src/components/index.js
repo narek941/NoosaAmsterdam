@@ -1,10 +1,10 @@
-import {TypeLinks, HeaderLogo, NoosaIconButton} from "./buttons";
+import {TypeLinks, HeaderLogo, NoosaButton} from "./buttons";
 import {Header,MainCarousel} from "./common";
 
 export{
   TypeLinks,
   Header,
   HeaderLogo,
-  NoosaIconButton,
+  NoosaButton,
   MainCarousel,
 }

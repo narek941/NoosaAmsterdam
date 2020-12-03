@@ -3,7 +3,7 @@ import Carousel from 'react-material-ui-carousel'
 import {Paper} from '@material-ui/core'
 import { Button } from '@material-ui/core';
 import carouselFirst from '../../../img/carouselFirst.png';
-
+import NoosaButton from '../../buttons/NoosaButton';
 const MainCarousel = () =>{
 
     var items = [
@@ -13,19 +13,22 @@ const MainCarousel = () =>{
             
         },
         {
-            name: "Random Name #2",
-            description: "Hello World!"
+            name: "New Collection",
+            description: "Noosa Amsterdam Accessories that you create yourself."
+            
         },
-        {
-            name: "New collection",
-            description: "Hello World!"
-        }
+         {
+            name: "New Collection",
+            description: "Noosa Amsterdam Accessories that you create yourself."
+            
+        },
+        
     ]
  
     return (
         <Carousel>
             {
-                items.map( (item, i) => <Item key={i} item={item}/> )
+                items.map( (item, i) => <Item key={i} item={item} /> )
             }
         </Carousel>
     )
@@ -42,12 +45,15 @@ function Item(props)
       };
     return (
         <div  style={myStyles} >
+            <div>
             <h2>{props.item.name}</h2>
             <p>{props.item.description}</p>
  
-            <Button className="CheckButton">
+            <NoosaButton className="CheckButton">
             Shop Now
-            </Button>
+            </NoosaButton>
+            </div>
+            
         </div>
     )
 }

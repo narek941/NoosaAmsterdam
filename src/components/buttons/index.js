@@ -1,9 +1,9 @@
 import TypeLinks from './TypeLinks';
 import HeaderLogo from './HeaderLogo';
-import NoosaIconButton from './NoosaIconButton';
+import NoosaButton from './NoosaButton';
 
 export{
-    NoosaIconButton,
+    NoosaButton,
     HeaderLogo,
     TypeLinks,
   } 
