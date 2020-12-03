@@ -2,12 +2,14 @@ import React from 'react';
 import Carousel from 'react-material-ui-carousel'
 import {Paper} from '@material-ui/core'
 import { Button } from '@material-ui/core';
+import carouselFirst from '../../../img/carouselFirst.png';
 
 const MainCarousel = () =>{
+
     var items = [
         {
-            name: "Random Name #1",
-            description: "Probably the most random thing you have ever seen!"
+            name: "New Collection",
+            description: "Noosa Amsterdam Accessories that you create yourself."
             
         },
         {
@@ -23,7 +25,7 @@ const MainCarousel = () =>{
     return (
         <Carousel>
             {
-                items.map( (item, i) => <Item key={i} item={item} /> )
+                items.map( (item, i) => <Item key={i} item={item}/> )
             }
         </Carousel>
     )
@@ -31,15 +33,22 @@ const MainCarousel = () =>{
  
 function Item(props)
 {
+    const myStyles = {
+        backgroundImage: `url(${carouselFirst})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        minHeight: '555px',
+      };
     return (
-        <>
+        <div  style={myStyles} >
             <h2>{props.item.name}</h2>
             <p>{props.item.description}</p>
  
             <Button className="CheckButton">
-                Check it out!
+            Shop Now
             </Button>
-        </>
+        </div>
     )
 }
 export default MainCarousel;
