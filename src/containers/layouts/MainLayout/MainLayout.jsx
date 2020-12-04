@@ -7,11 +7,11 @@ const MainLayout = ({children, ...props}) => {
   return(
     <>
       <Header />
-      <Container className="MainLayout__Container" maxWidth="lg">
-        <Paper className="MainLayout__Paper" elevation={3}>
+      <div className="MainLayout__Container">
+        
           {children}
-        </Paper>
-      </Container>
+        
+      </div>
     </>
   )
 };
