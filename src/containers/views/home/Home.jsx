@@ -1,11 +1,12 @@
 import React from 'react';
-import {MainCarousel} from '../../../components';
-import { ProductCard } from '../../../components/common';
+import {MainCarousel,MainGift,ProductCard} from '../../../components';
+
 const Home = () => {
   return(
     <>
       <MainCarousel/>
       <ProductCard/>
+      <MainGift/>
 </>
   )
 }

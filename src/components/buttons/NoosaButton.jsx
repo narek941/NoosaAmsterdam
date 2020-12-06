@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink as RouterNavLink } from 'react-router-dom';
 import { Button } from '@material-ui/core';
 
-const NoosaButton = ({children,...props}) => {
+const NoosaButton = ({children,...props},width='160px',height='56px') => {
     const shopButton = {
         background: '#CF8957 0% 0% no-repeat padding-box',
         borderRadius: '4px',

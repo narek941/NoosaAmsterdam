@@ -35,7 +35,7 @@ const Footer = ({ children, ...props }) => {
     textDecoration: 'none',
     height: '19px',
     fontSize: '16px',
-    marginTop: "5px"
+    marginTop: "5px",
 
   };
   return (

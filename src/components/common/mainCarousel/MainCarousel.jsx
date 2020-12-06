@@ -64,7 +64,7 @@ const slider_text = {
         <div style={slider_title} >{props.item.name}</div>
         <div style={slider_text} >{props.item.description}</div>
 
-        <NoosaButton className="CheckButton">Shop Now</NoosaButton>
+        <NoosaButton className="CheckButton" >Shop Now</NoosaButton>
       </div>
     </div>
   );
