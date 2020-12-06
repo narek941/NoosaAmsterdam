@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import product from "../../../img/product.png"
 import NoosaButton from "../../buttons/NoosaButton";
 import IconButton from '../../../img/IconButton';
 
-const ProductCard = (props) => {
+
+    
+const ProductCard = () => {
+
+ 
 
   const cardContainer = {
     backgroundColor: '#686261',
@@ -39,7 +43,7 @@ const ProductCard = (props) => {
       <div style={card}>
         <div style={cardInfoContent}>
         <div>
-        Bracelet Spirit
+        {productID.id}
         <span>30$</span>
           
         </div>
