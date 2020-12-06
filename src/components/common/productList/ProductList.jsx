@@ -1,22 +1,26 @@
 import React, { useEffect, useState  } from "react";
-import ProductCard from "../productCard";
+import data  from '../../../db.json';
+import Product from "../productCard";
 
-const ProductList=(...props)=> {
+const ProductList=()=> {
+  const [products, setProducts] = useState([2]);
 
+     useEffect(() => {
+      setProducts(data);
       
-    const [products, setProducts] = useState([
-      {id:1},
-      {id:2}
-    ]);
-    return (
   
-    <div>
+  }, []);
+
+    return (
+      <>
+      <div>{products}+"544"</div>
+    <Container>
       {products.map(product => (
-        <ProductCard key={product.id} {...product} />
+        <ItemCard key={1} {...product} />
       ))}
-    </div>
+    </Container>
 
-
+      </>
     );
   
 }

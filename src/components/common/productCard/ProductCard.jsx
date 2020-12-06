@@ -43,7 +43,7 @@ const ProductCard = () => {
       <div style={card}>
         <div style={cardInfoContent}>
         <div>
-        {productID.id}
+        {}
         <span>30$</span>
           
         </div>
