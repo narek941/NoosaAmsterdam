@@ -7,7 +7,7 @@ const TypeLinks = ({ type, to, children, ...props }) => {
   const mystyle = {
     opacity: 1,
     textTransform: 'capitalize',
-    margin: '31px 27px 31px 0px',
+    margin: '0px 27px 0px 0px',
     color: '#F5F3F2',
   }
 

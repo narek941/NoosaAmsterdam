@@ -29,7 +29,7 @@ function Item(props) {
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundPosition: "center",
-    minHeight: "500px",
+    minHeight: "410px",
     margin: "0",
     top: 0,
     padding: 0,
