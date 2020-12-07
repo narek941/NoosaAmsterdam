@@ -2,11 +2,25 @@ import React, {useState, useEffect} from 'react';
 import product from "../../../img/product.png"
 import NoosaButton from "../../buttons/NoosaButton";
 import IconButton from '../../../img/IconButton';
+import axios from "axios";
 
 
     
 const ProductCard = () => {
+  useEffect(async () => {
+    const result = await axios(
+      'https://my-json-server.typicode.com/narek941/FakeJSONPlaceholder/posts',
+    );
+ 
+    console.log(result);
+  });
+     
+    
 
+
+
+ 
+ 
  
 
   const cardContainer = {
