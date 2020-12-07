@@ -1,20 +1,18 @@
 import React, {useState, useEffect} from 'react';
-import product from "../../../img/product.png"
+import product_1 from "../../../img/product_1.png"
+import product_2 from "../../../img/product_2.png"
+import product_3 from "../../../img/product_3.png"
+import product_4 from "../../../img/product_4.png"
+import product_5 from "../../../img/product_5.png"
+import product_6 from "../../../img/product_6.png"
 import NoosaButton from "../../buttons/NoosaButton";
 import IconButton from '../../../img/IconButton';
 import axios from "axios";
 
 
     
-const ProductCard = () => {
-  useEffect(async () => {
-    const result = await axios(
-      'https://my-json-server.typicode.com/narek941/FakeJSONPlaceholder/posts',
-    );
- 
-    console.log(result);
-  });
-     
+const ProductCard = (item) => {
+  
     
 
 
@@ -37,7 +35,7 @@ const ProductCard = () => {
   };
   const card = {
    
-    backgroundImage: `url(${product})`,
+    backgroundImage: `url(${item.img})`,
     minHeight: '330px',
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
@@ -52,14 +50,15 @@ const ProductCard = () => {
   position: 'absolute',
 
   };
+  console.log(item)
+
   return (
     <div style={cardContainer} >
       <div style={card}>
         <div style={cardInfoContent}>
         <div>
-        {}
-        <span>30$</span>
-          
+        {item.title}
+        <span>{item.price}$</span>
         </div>
         <div>
         <IconButton type='basket' />

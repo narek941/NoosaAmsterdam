@@ -1,5 +1,5 @@
 import {TypeLinks, HeaderLogo, NoosaButton} from "./buttons";
-import {Header,Footer,MainCarousel,ProductCard,MainGift} from "./common";
+import {Header,Footer,MainCarousel,ProductList,MainGift} from "./common";
 
 export{
   TypeLinks,
@@ -7,7 +7,7 @@ export{
   HeaderLogo,
   NoosaButton,
   MainCarousel,
-  ProductCard,
+  ProductList,
   Footer,
   MainGift,
 }
