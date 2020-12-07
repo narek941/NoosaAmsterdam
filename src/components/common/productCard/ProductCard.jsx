@@ -8,19 +8,12 @@ import product_6 from "../../../img/product_6.png"
 import NoosaButton from "../../buttons/NoosaButton";
 import IconButton from '../../../img/IconButton';
 import axios from "axios";
-
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
 
     
-const ProductCard = (item) => {
+const ProductCard = (products) => {
   
-    
-
-
-
- 
- 
- 
-
   const cardContainer = {
     backgroundColor: '#686261',
     maxWidth: '300px',
@@ -35,7 +28,7 @@ const ProductCard = (item) => {
   };
   const card = {
    
-    backgroundImage: `url(${item.img})`,
+    //backgroundImage: `url(${item.item.img})`,
     minHeight: '330px',
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
@@ -50,24 +43,28 @@ const ProductCard = (item) => {
   position: 'absolute',
 
   };
-  console.log(item)
+  console.log(products)
 
   return (
+    <>
+      {products.map((item,index) => ( 
+    <Grid item xs={4}>
     <div style={cardContainer} >
       <div style={card}>
         <div style={cardInfoContent}>
         <div>
-        {item.title}
-        <span>{item.price}$</span>
+       {/* {item.item.title}
+        <span>{item.item.price}$</span> */}
         </div>
         <div>
         <IconButton type='basket' />
         <NoosaButton>Shop Now</NoosaButton></div>
         </div>
       </div>
-    </div>
-
-
+    </div>    </Grid>
+  ))} 
+  </>    
+   
   )
 }
 

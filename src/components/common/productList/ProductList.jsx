@@ -1,36 +1,47 @@
 import React, { useEffect, useState } from "react";
 import { ProductCard } from "../productCard";
 import axios from "axios";
+import Grid from "@material-ui/core/Grid";
+import Paper from "@material-ui/core/Paper";
 
 const ProductList = () => {
-  const [products, setProducts] = useState([""]);
+  const [productsOne, setProductsOne] = useState([""]);
+  const [productsTwo, setProductsTwo] = useState([""]);
 
   useEffect(() => {
-    fetchData()
-  });
+    fetchData();
+  }, []);
 
-  const fetchData = () => {
-     axios('https://my-json-server.typicode.com/narek941/FakeJSONPlaceholder/product')
-      .then((response) => response.json())
-      .then((data) => {
-        setProducts(data.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(
+        "https://my-json-server.typicode.com/narek941/FakeJSONPlaceholder/product"
+      );
+      const data = await response.data;
+      setProductsOne(data.slice(0,3));
+      setProductsTwo(data.slice(3));
+
+    } catch (e) {
+    } finally {
+    }
   };
 
-  console.log(products);
 
   return (
-    <ul>
-      {products.map(item => (
-        <li key={item.id}>
+    <Grid container spacing={1}>
+     
+        <Grid container item xs={12} spacing={6}>
           <ProductCard />
-        </li>
-      ))}
-    </ul>
-  )
-}
+        </Grid>
+     
+
+      
+         <Grid container item xs={12} spacing={6}>
+          <ProductCard/>
+        </Grid> 
+     
+    </Grid>
+  );
+};
 
 export default ProductList;
