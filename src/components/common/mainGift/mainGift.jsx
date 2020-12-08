@@ -1,10 +1,9 @@
 import React from 'react';
 import NoosaButton from "../../buttons/NoosaButton";
-import gift_bg from '../../../img/gift_bg.png'
+import gift_bg from '../../../img/gift_bg.png';
+import styles from './MainGift.module.css';
 const MainGift = (props) => {
 
- 
-  
   return (
     <div className={styles.mainStyle} >
       <div className={styles.content}>
@@ -12,7 +11,7 @@ const MainGift = (props) => {
               Buy a gift card for any price and you are free, from further choice of gifts.
               </div>
               <div className={styles.button}>
-                  <NoosaButton >Shop Now</NoosaButton>
+                  <NoosaButton >Buy Now</NoosaButton>
               </div>
           
       </div>

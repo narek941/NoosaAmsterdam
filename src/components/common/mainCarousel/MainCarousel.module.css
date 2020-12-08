@@ -1,16 +1,15 @@
 
 .slider{
-    background-image: url(../../../img/carouselFirst.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    min-height: 410px;
-    margin: 0;
-    top: 0;
-    padding: 0;
-    position: relative;
-
-  }
+  position: relative;
+  background-repeat: no-repeat;
+  background-image: url(../../../img/carouselFirst.png);
+  background-position: center;
+  min-height: 410px;
+  margin: 0;
+  top: 0;
+  padding: 0;
+  background-size: cover;
+}
   .slider_itemContent {
     text-align: left;
     padding-left: 200px;

@@ -1,7 +1,8 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
-import { HeaderLogo, TypeLinks } from '../../index';
-import styles from './Footer.module.css'; 
+import { HeaderLogo, TypeLinks } from '../../buttons';
+import styles from './Footer.module.css';
+import IconButton from '../../../img/IconButton';
 
 const Footer = ({ children, ...props }) => {
 
@@ -10,7 +11,7 @@ const Footer = ({ children, ...props }) => {
       <Grid className={styles.footerRow} justify="center" alignItems="center" container direction="row">
         <Grid item xs={12} md={3}>
           <div className={styles.firstRow}>
-            <HeaderLogo/>
+            <HeaderLogo />
           NOOSA-Amsterdam are accessories made of high quality leather, decorated with handmade buttons.
           </div>
 
@@ -18,7 +19,7 @@ const Footer = ({ children, ...props }) => {
         <Grid item xs={12} md={3}>
           <div>
 
-            <ul  className={styles.ulStyle}>
+            <ul className={styles.ulStyle}>
               <h2>Information</h2>
               <li className={styles.liStyle}><TypeLinks type='navigation' to="/home">Home</TypeLinks></li>
               <li className={styles.liStyle}><TypeLinks type='navigation' to="/about">About Us</TypeLinks></li>
@@ -33,21 +34,20 @@ const Footer = ({ children, ...props }) => {
         <Grid item xs={12} md={3}>
           <div >
 
-            <ul  className={styles.ulStyle}>
+            <ul className={styles.ulStyle}>
               <h2>Products</h2>
               <li className={styles.liStyle}><TypeLinks type='navigation' to="/product">Bracelets</TypeLinks></li>
               <li className={styles.liStyle}><TypeLinks type='navigation' to="/product">Buttons</TypeLinks></li>
               <li className={styles.liStyle}><TypeLinks type='navigation' to="/product">Bags</TypeLinks></li>
               <li className={styles.liStyle}><TypeLinks type='navigation' to="/product">Wallets</TypeLinks></li>
               <li className={styles.liStyle}><TypeLinks type='navigation' to="/product">Belts</TypeLinks></li>
-              <li className={styles.liStyle}><TypeLinks type='navigation' to="/product">Gift Crad</TypeLinks></li>
+              <li className={styles.liStyle}><TypeLinks type='navigation' to="/product">Gift Card</TypeLinks></li>
             </ul>
 
           </div>
         </Grid>
         <Grid item xs={12} md={3}>
           <div >
-
             <ul className={styles.ulStyle}>
               <h2>Contacts</h2>
               <li className={styles.liStyle}><TypeLinks >Phone Number 319-481-1070</TypeLinks></li>
@@ -56,7 +56,8 @@ const Footer = ({ children, ...props }) => {
               <li className={styles.liStyle}><TypeLinks >Address 2710 Pyramid Valley Road</TypeLinks></li>
               <li className={styles.liStyle}><TypeLinks >Follow us on social networks</TypeLinks></li>
             </ul>
-            
+            <IconButton type="fb" />
+            <IconButton type='insta' />
           </div>
         </Grid>
       </Grid>

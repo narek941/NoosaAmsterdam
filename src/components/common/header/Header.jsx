@@ -1,13 +1,13 @@
 import React from 'react';
 import { AppBar, Toolbar, TextField } from '@material-ui/core';
-import { HeaderLogo, TypeLinks} from '../../index';
+import { HeaderLogo, TypeLinks } from '../../index';
 import './Header.css';
 import IconButton from '../../../img/IconButton';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import InputBase from '@material-ui/core/InputBase';
 
 
-const useStyles = makeStyles((theme)=>({
+const useStyles = makeStyles((theme) => ({
   root: {
     background: '#7A7674',
   },
@@ -30,15 +30,11 @@ const useStyles = makeStyles((theme)=>({
     color: 'inherit',
   },
   inputInput: {
-    padding: theme.spacing(1, 1, 1, 0),
-    paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-    transition: theme.transitions.create('width'),
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-      width: '12ch',
-      '&:focus': {
-        width: '20ch',
-      }, }, },
+    
+      width: '12ch', 
+      marginLeft: '30ch',
+    
+  },
 }));
 
 
@@ -50,9 +46,7 @@ const Header = ({ children, ...props }) => {
   return (
     <AppBar className={classes.root} position="static">
       <Toolbar>
-        <div>
-          <HeaderLogo  type='header' to={"/home"}/>
-        </div>
+        <HeaderLogo type='header' to={"/home"} />
         <div>
           <TypeLinks type='navigation' to="/product" >
             product
@@ -69,24 +63,22 @@ const Header = ({ children, ...props }) => {
           <TypeLinks>
             sale
         </TypeLinks>
+        </div>
 
-        </div>
-        <div>
-          
-        </div>
         <InputBase
-              placeholder="Search…"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ 'aria-label': 'search' }}
-            />
-        <IconButton type='search' />
-        <IconButton type='basket' />
-        <IconButton type='user' />    
+          placeholder="Search…"
+          classes={{
+            root: classes.inputRoot,
+            input: classes.inputInput,
+          }}
+          inputProps={{ 'aria-label': 'search' }}
+        />
+          <IconButton type='search' />
+          <IconButton type='basket' />
+          <IconButton type='user' />
+
         {children}
- 
+
       </Toolbar>
     </AppBar>
   )

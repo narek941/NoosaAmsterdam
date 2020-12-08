@@ -1,36 +1,35 @@
 .mainStyle{
-    background-image: url(../../../img/gift_bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    min-height: 453px;
-    margin: 0;
-    top: 0;
-    padding: 0;
-    position: relative;
-
-  };
-  .content{
-    transform: translateY(50%);
-    position: absolute;
-    right:0px;
-  };
-  .text{
-    margin: auto;
-    padding: 40px;
-    width: 600px;
-    height: 77px;
-    background-color:#686261;
-    border-radius: 4px;
-    text-align: center;
-    font-family: Segoe UI;
-    letter-spacing: 0px;
-    color: #F5F3F2;
-    font-size:29px;
-    font-weight: 600;
-  };
-  .button{
-   padding-top: 20px;
-   left:0;
-   position: absolute;
-  };
+  background-image: url(../../../img/gift_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 453px;
+  margin: 0;
+  top: 0;
+  padding: 0;
+  position: relative;
+}
+.content{
+  transform: translateY(50%);
+  position: absolute;
+  right:0px;
+}
+.text{
+  margin: auto;
+  padding: 40px;
+  width: 600px;
+  height: 77px;
+  background-color:#686261;
+  border-radius: 4px;
+  text-align: center;
+  font-family: Segoe UI;
+  letter-spacing: 0px;
+  color: #F5F3F2;
+  font-size:29px;
+  font-weight: 600;
+}
+.button{
+  padding-top: 20px;
+  left:0;
+  position: absolute;
+}
