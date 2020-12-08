@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import product_1 from "../../../img/product_1.png"
 import product_2 from "../../../img/product_2.png"
 import product_3 from "../../../img/product_3.png"
@@ -11,9 +11,9 @@ import axios from "axios";
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 
-    
+
 const ProductCard = (products) => {
-  
+
   const cardContainer = {
     backgroundColor: '#686261',
     maxWidth: '300px',
@@ -27,8 +27,8 @@ const ProductCard = (products) => {
 
   };
   const card = {
-   
-    //backgroundImage: `url(${item.item.img})`,
+
+   // backgroundImage: `url(${item.item.img})`,
     minHeight: '330px',
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
@@ -38,34 +38,42 @@ const ProductCard = (products) => {
   };
 
   const cardInfoContent = {
-  bottom:"0",
-  left: '0',
-  position: 'absolute',
+    bottom: "0",
+    left: '0',
+    position: 'absolute',
 
   };
-  console.log(products)
 
+
+
+
+
+
+
+  console.log(products.products)
+  
+
+  
   return (
-    <>
-      {products.map((item,index) => ( 
-    <Grid item xs={4}>
-    <div style={cardContainer} >
+    products.products.map((item, index) => (
+    <div style={cardContainer}>
       <div style={card}>
         <div style={cardInfoContent}>
-        <div>
-       {/* {item.item.title}
-        <span>{item.item.price}$</span> */}
-        </div>
-        <div>
-        <IconButton type='basket' />
-        <NoosaButton>Shop Now</NoosaButton></div>
+          <div>
+            {item.title}
+                  <span>{item.price}$</span> 
+            <div>
+              <IconButton type='basket' />
+              <NoosaButton>Shop Now</NoosaButton>
+            </div>
+          </div>
         </div>
       </div>
-    </div>    </Grid>
-  ))} 
-  </>    
-   
+    </div>
   )
+ ))
+
+                
 }
 
 export default ProductCard;

@@ -5,7 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 
 const ProductList = () => {
-  const [productsOne, setProductsOne] = useState([""]);
+  const [products, setProducts] = useState([""]);
   const [productsTwo, setProductsTwo] = useState([""]);
 
   useEffect(() => {
@@ -18,29 +18,29 @@ const ProductList = () => {
         "https://my-json-server.typicode.com/narek941/FakeJSONPlaceholder/product"
       );
       const data = await response.data;
-      setProductsOne(data.slice(0,3));
-      setProductsTwo(data.slice(3));
-
+     
+      console.log(data);
+      setProducts(data);
+      
     } catch (e) {
     } finally {
     }
   };
-
-
-  return (
-    <Grid container spacing={1}>
-     
-        <Grid container item xs={12} spacing={6}>
-          <ProductCard />
-        </Grid>
-     
-
+ 
+    
       
-         <Grid container item xs={12} spacing={6}>
-          <ProductCard/>
-        </Grid> 
-     
-    </Grid>
+console.log(products)
+  return (
+   
+    
+      <Grid container spacing={1}>
+      <Grid container item xs={12} spacing={6}>
+      <ProductCard products={products.slice(0,3)}/>
+      </Grid>
+       <Grid container item xs={12} spacing={6}>
+      <ProductCard products={products.slice(3)}/>
+      </Grid> 
+      </Grid>
   );
 };
 
