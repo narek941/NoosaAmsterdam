@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ProductCard } from "../productCard";
 import axios from "axios";
 import Grid from "@material-ui/core/Grid";
+import styles from "./ProductList.module.css";
 
 const ProductList = () => {
   const [products, setProducts] = useState([""]);
@@ -23,8 +24,8 @@ const ProductList = () => {
   };
 
   return (
-
-
+<>
+    <h2>Best Offers</h2>
     <Grid container spacing={1}>
       <Grid container item xs={12} spacing={6}>
         <ProductCard products={products.slice(0, 3)} />
@@ -33,6 +34,8 @@ const ProductList = () => {
         <ProductCard products={products.slice(3)} />
       </Grid>
     </Grid>
+
+    </>
   );
 };
 
