@@ -24,8 +24,8 @@ const ProductList = () => {
   };
 
   return (
-<>
-    <h2>Best Offers</h2>
+<div>
+    <div className={styles.title}>Best Offers</div>
     <Grid container spacing={1}>
       <Grid container item xs={12} spacing={6}>
         <ProductCard products={products.slice(0, 3)} />
@@ -35,7 +35,7 @@ const ProductList = () => {
       </Grid>
     </Grid>
 
-    </>
+    </div>
   );
 };
 

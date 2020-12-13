@@ -29,3 +29,35 @@
 .MuiButton-text {
   padding: 0px;
 }
+.button{
+  width: 60px;
+  height: 41px;
+  text-align: left;
+  font-size:  12px;
+  letter-spacing: 0px;
+  opacity: 1;
+  background: #8D8383;
+  border-radius: 10px;
+  margin-left: -60px;
+  padding: initial;
+
+}
+.input{
+  width: 182px;
+  height: 39px;
+  background: #F5F3F2;
+  border-radius: 10px;
+  border:none;
+  font-size: 12px;
+  color: #343333;
+  letter-spacing: 0px;
+
+}
+.subscribe{
+  display: flex;
+  align-items: center;
+}
+.subscribeContent{
+  position: absolute;
+  right: 200px;
+}

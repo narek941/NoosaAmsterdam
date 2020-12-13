@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { AppBar, Toolbar, TextField } from '@material-ui/core';
 import { HeaderLogo, TypeLinks } from '../../index';
 import './Header.css';
 import IconButton from '../../../img/IconButton';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import InputBase from '@material-ui/core/InputBase';
-
+import SignPopup from '../popup/SignPop';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -37,14 +37,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
+const togglePopup = ()=>{  
+  console.log("ds")
+} 
 
 const Header = ({ children, ...props }) => {
-
+  const [showPopup, SetShowPopup] = useState(false);
   const classes = useStyles();
 
   return (
-    <AppBar className={classes.root} position="static">
+    <>
+    <AppBar className={classes.root} position="static" >
       <Toolbar>
         <HeaderLogo type='header' to={"/home"} />
         <div>
@@ -73,14 +76,18 @@ const Header = ({ children, ...props }) => {
           }}
           inputProps={{ 'aria-label': 'search' }}
         />
-          <IconButton type='search' />
-          <IconButton type='basket' />
-          <IconButton type='user' />
+          <span><IconButton type='search' /></span>
+          <span><IconButton type='basket' /></span>
+          <span  onClick={() => SetShowPopup(!showPopup)}><IconButton type='user'/></span>
 
         {children}
 
       </Toolbar>
     </AppBar>
+    {showPopup ?
+    <SignPopup/> 
+    : null }
+    </>
   )
 }
 

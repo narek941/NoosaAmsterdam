@@ -5,7 +5,7 @@ import styles from "./ProductCard.module.css";
 import CardMedia from "@material-ui/core/Grid";
 
 const ProductCard = (products) => {
-  return products.products.map((item, index) => (
+  return products.products.map((item) => (
     <div className={styles.cardContainer} key={item.id}>
       <div>
         <img className={styles.card} src={item.img} />
