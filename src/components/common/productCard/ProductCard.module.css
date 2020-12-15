@@ -16,6 +16,7 @@
     padding-bottom: 103px;
     
 }
+
 .cardInfoContent{
     left: 0;
     top:450px;
@@ -36,8 +37,21 @@
     margin-left: 200px;
 }
 .cardAction{
-    display: inline-flex;
+    position: absolute; 
+    display: flex;
+    padding: 16px;
+    
 }
-
+.btn{
+    margin-left: 256px;
+}
+.icon{
+    background-color:#CF8957;
+    border-radius: 4px;
+    opacity: 1;
+    width: 36px;
+    height: 36px;
+    display:table;
+}
 
 

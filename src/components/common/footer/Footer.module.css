@@ -1,6 +1,6 @@
 .footerContainer {
   background-color: #7A7674;
-  min-height: 300px;
+  min-height: 400px;
   padding-left: 180px;
   padding-top: 50px;
   opacity: 1;
@@ -60,4 +60,8 @@
 .subscribeContent{
   position: absolute;
   right: 200px;
+}
+.social{
+  margin-right:16px;
+  margin-bottom: 16px;
 }

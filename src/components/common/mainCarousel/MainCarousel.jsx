@@ -9,11 +9,19 @@ const MainCarousel = () => {
       name: "New Collection",
       description: "Noosa Amsterdam Accessories that you create yourself",
     },
+    {
+      name: "New Collection",
+      description: "Noosa Amsterdam Accessories that you create yourself",
+    },
+    {
+      name: "New Collection",
+      description: "Noosa Amsterdam Accessories that you create yourself",
+    },
    
   ];
 
   return (
-    <Carousel>
+    <Carousel navButtonsAlwaysVisible	='true' >
       {items.map((item, i) => (
         <Item key={i} item={item} />
       ))}

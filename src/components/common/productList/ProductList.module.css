@@ -4,5 +4,9 @@
     letter-spacing: 0px;
     color: #3D3D3B;
     opacity: 1;
-    margin-left: 190px;
+    padding-left: 46px;
+}
+.productList{
+   
+    padding: 80px 150px 80px 146px;
 }

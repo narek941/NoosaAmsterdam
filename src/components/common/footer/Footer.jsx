@@ -61,8 +61,9 @@ const Footer = ({ children, ...props }) => {
       </Grid>
       <div className={styles.subscribeContent}>
       <div className={styles.subscribe}>
-            <IconButton type="fb" />
-            <IconButton type='insta' /></div>
+            <span className={styles.social}><IconButton type="fb" /></span>
+            <span className={styles.social}><IconButton type='insta' /></span>
+            </div>
             <input type="text" placeholder="Enter Email Address"   background-color= '#f2f2f2' className={styles.input}/>
             <button className={styles.button}>Subscribe</button>
     </div>

@@ -5,18 +5,19 @@ import styles from "./ProductCard.module.css";
 import CardMedia from "@material-ui/core/Grid";
 
 const ProductCard = (products) => {
-  return products.products.map((item) => (
-    <div className={styles.cardContainer} key={item.id}>
+  return products.products.map((item,index) => (
+    <div className={styles.cardContainer} key={index}>
       <div>
         <img className={styles.card} src={item.img} />
         <div className={styles.cardInfoContent}>
+          
           <div className={styles.cardTitle}>
             {item.title}
             <span>{item.price}$</span>
           </div>
           <div className={styles.cardAction}>
-            <IconButton type="basket" />
-            <NoosaButton type="product">Shop Now</NoosaButton>
+            <span className={styles.icon}><IconButton type="basketOrange" /></span>
+            <span className={styles.btn}><NoosaButton  type="product">Shop Now</NoosaButton></span>
           </div>
         </div>
       </div>
