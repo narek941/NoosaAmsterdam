@@ -36,7 +36,7 @@ const useDataFetching = (url="", load, initialParams={}, startData=[]) => {
 
   }, [url, dynamicParams]);
 
-  return {fetchData, data, error, loading, setDynamicParams};
+  return {data, error, loading, setDynamicParams};
 
 };
 
