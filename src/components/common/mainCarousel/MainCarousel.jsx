@@ -2,20 +2,27 @@ import React from "react";
 import Carousel from "react-material-ui-carousel";
 import NoosaButton from "../../buttons/NoosaButton";
 import styles from "./MainCarousel.module.css";
+import firs from "../../../img/carouselFirst.png";
+import second from "../../../img/carouselSecond.png";
+import third from "../../../img/carouselThird.png";
+
 
 const MainCarousel = () => {
   var items = [
     {
       name: "New Collection",
       description: "Noosa Amsterdam Accessories that you create yourself",
+      img: firs,
     },
     {
       name: "New Collection",
-      description: "Noosa Amsterdam Accessories that you create yourself",
+      description: "Tell your story with the unique Noosa Amsterdam collection",
+      img: second,
     },
     {
-      name: "New Collection",
+      name: "Noosa Amsterdam",
       description: "Noosa Amsterdam Accessories that you create yourself",
+      img: third,
     },
    
   ];
@@ -32,7 +39,7 @@ const MainCarousel = () => {
 function Item(props) {
 
   return (
-    <div className={styles.slider} >
+    <div className={styles.slider} style={{ backgroundImage: `url(${props.item.img})`}} >
       <div className={styles.slider_itemContent}>
         <div className={styles.slider_title} >{props.item.name}</div>
         <div className={styles.slider_text} >{props.item.description}</div>

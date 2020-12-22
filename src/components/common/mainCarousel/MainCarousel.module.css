@@ -2,7 +2,6 @@
 .slider{
   position: relative;
   background-repeat: no-repeat;
-  background-image: url(../../../img/carouselFirst.png);
   background-position: center;
   min-height: 410px;
   margin: 0;

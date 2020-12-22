@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, TextField ,Button} from '@material-ui/core';
+import { Grid, TextField, Button } from '@material-ui/core';
 import { HeaderLogo, TypeLinks } from '../../buttons';
 import styles from './Footer.module.css';
 import IconButton from '../../../img/IconButton';
@@ -55,6 +55,7 @@ const Footer = ({ children, ...props }) => {
               <li className={styles.liStyle}><TypeLinks >Email 7wchb77kv59@temporary-mail.netm</TypeLinks></li>
               <li className={styles.liStyle}><TypeLinks >Address 2710 Pyramid Valley Road</TypeLinks></li>
               <li className={styles.liStyle}><TypeLinks >Follow us on social networks</TypeLinks></li>
+              <li className={styles.liStyle}></li>
             </ul>
           </div>
         </Grid>
