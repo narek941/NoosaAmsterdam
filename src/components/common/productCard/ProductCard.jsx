@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import NoosaButton from "../../buttons/NoosaButton";
 import IconButton from "../../../img/IconButton";
 import styles from "./ProductCard.module.css";
-import CardMedia from "@material-ui/core/Grid";
 
 const ProductCard = (products) => {
   return products.products.map((item,index) => (

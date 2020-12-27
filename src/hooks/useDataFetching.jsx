@@ -8,12 +8,12 @@ const useDataFetching = (url="", load, initialParams={}, startData=[]) => {
   const [data, setData] = useState(startData);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
-  const [dynamicParams, setDynamicParams] = useState(initialParams);
+
 
   const fetchData = async () => {
 
     try {
-      const response = await axios.get(url, {params : dynamicParams});
+      const response = await axios.get(url);
       const data = await response.data;
       setData(data);
     }
@@ -33,10 +33,10 @@ const useDataFetching = (url="", load, initialParams={}, startData=[]) => {
     }
 
     fetchData();
-
-  }, [url, dynamicParams]);
-
-  return {data, error, loading, setDynamicParams};
+    console.log(data)
+  }, [url]);
+  
+  return {data, error, loading};
 
 };
 

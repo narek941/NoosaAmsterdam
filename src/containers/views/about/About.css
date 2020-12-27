@@ -1,0 +1,67 @@
+.container{
+    padding-left: 280px;
+    padding-right: 214px;
+
+}
+.content{
+    height: 548px;
+    position: relative;
+    font: 'Roboto';
+    padding-top: 80px;
+
+}
+.img{
+    position: absolute;
+    height: 548px;
+    padding-right: 148px;
+}
+.textInfo{
+    position: absolute;
+    width: 548px;
+    text-align: center;
+    font-size: 16px;
+    color: #3D3D3B;
+    opacity: 1;
+    right: 214px;
+    top: 200px;
+}
+.textTitle{
+    font-size: 36px;
+    color: #3D3D3B;
+    opacity: 1;
+}
+.text{
+    width: 680px; 
+    font-size: 16px;
+    margin: 20px;
+    text-align: center;
+    
+}
+.img2{
+    position: absolute;
+    width: 548px;
+    height: 548px;
+    right: -743px;
+    top: -120px;
+    padding-left: 148px;
+
+}
+.textInfo2{
+    position: absolute;
+    text-align: center;
+    font-size: 16px;
+    color: #3D3D3B;
+    opacity: 1;
+    top: 150px;
+}
+.textTitle2{
+    font-size: 36px;
+    color: #3D3D3B;
+    opacity: 1;
+}
+.text2{
+    width: 680px; 
+    font-size: 16px;
+    margin: 20px;
+    text-align: center;
+}

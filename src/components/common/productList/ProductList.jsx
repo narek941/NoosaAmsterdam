@@ -11,10 +11,10 @@ const ProductList = () => {
 
   useEffect(() => {
     //fetchData();
+    console.log(data)
    
   }, []);
     const { data , error, loading} = useDataFetching("https://my-json-server.typicode.com/narek941/FakeJSONPlaceholder/product");
-    
   // const fetchData = async () => {
   //   try {
   //     const response = await axios.get(
@@ -24,8 +24,10 @@ const ProductList = () => {
   //     setProducts(data);
   //   } catch (e) {
   //   } finally {
+    
   //   }
   // };
+
 
   return (
      <section>
