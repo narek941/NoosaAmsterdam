@@ -54,4 +54,64 @@
     display:table;
 }
 
+ 
+.smallCardContainer{
+    background-color: #686261;
+    width: 316px;
+    height: 390px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 32px auto;
+    text-align: center;
+    opacity: 1;
+    position: relative;
+}
+.smallCard{
+    height: 323px;
+    border-radius: 20px;
+    width: 316px;
+    padding-bottom: 103px;
+    
+}
+
+.smallCardInfoContent{
+    left: 0px;
+    top: 324px;
+    position: absolute; 
+    display: block;
+}
+.smallCardTitle{
+    text-align: left;
+    letter-spacing: 0px;
+    color: #F5F3F2;
+    opacity: 1;  
+    font-size: 16px;
+    margin-left: 10px;
+}
+.smallCardTitle span{
+    text-align: right;
+    font-size: 24px;
+    margin-left: 100px;
+}
+.smallCardAction{
+    position: absolute; 
+    display: flex;
+    padding-left: 10px;
+    
+}
+.smallBtn{
+    margin-left: 150px;
+    text-align: center;
+
+}
+.SmallIcon{
+    background-color:#CF8957;
+    border-radius: 4px;
+    opacity: 1;
+    width: 24px;
+    height: 24px;
+    display:table;
+}
+
+
 
