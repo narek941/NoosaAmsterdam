@@ -1,6 +1,5 @@
 import React from 'react';
 import NoosaButton from "../../buttons/NoosaButton";
-import gift_bg from '../../../img/gift_bg.png';
 import styles from './MainGift.module.css';
 const MainGift = (props) => {
 

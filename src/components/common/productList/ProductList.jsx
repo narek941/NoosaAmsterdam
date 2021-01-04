@@ -3,8 +3,6 @@ import { ProductCard } from "../productCard";
 import axios from "axios";
 import Grid from "@material-ui/core/Grid";
 import styles from "./ProductList.module.css";
-import IconButton from "../../../img/IconButton";
-import CircularProgress from '@material-ui/core/CircularProgress';
 
 const ProductList = () => {
 const [products,setProducts] = useState([]);

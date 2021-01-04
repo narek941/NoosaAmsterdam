@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AppBar, Toolbar, TextField } from '@material-ui/core';
+import { AppBar, Toolbar} from '@material-ui/core';
 import { HeaderLogo, TypeLinks } from '../../index';
 import './Header.css';
 import IconButton from '../../../img/IconButton';
@@ -37,9 +37,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const togglePopup = ()=>{  
-  console.log("ds")
-} 
 
 const Header = ({ children, ...props }) => {
   const [showPopup, SetShowPopup] = useState(false);

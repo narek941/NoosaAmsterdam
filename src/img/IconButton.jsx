@@ -10,11 +10,7 @@ const iconStyle = {
     margin: '15px',
     right: '200px',
 }
-const likeStyle = {
-    textAlign: 'center',
-    color: '#CF8957',
 
-}
 
 
 const IconButton = (props) => {

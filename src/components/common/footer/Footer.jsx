@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, TextField, Button } from '@material-ui/core';
+import { Grid} from '@material-ui/core';
 import { HeaderLogo, TypeLinks } from '../../buttons';
 import styles from './Footer.module.css';
 import IconButton from '../../../img/IconButton';

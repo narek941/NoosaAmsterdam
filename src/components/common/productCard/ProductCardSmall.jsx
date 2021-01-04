@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import NoosaButton from "../../buttons/NoosaButton";
 import IconButton from "../../../img/IconButton";
 import styles from "./ProductCard.module.css";
@@ -7,7 +7,7 @@ const ProductCard = (products) => {
   return products.products.map((item,index) => (
     <div className={styles.smallCardContainer} key={index}>
       <div>
-        <img className={styles.smallCard} src={item.img} />
+        <img className={styles.smallCard} src={item.img} alt="img" />
         <div className={styles.smallCardInfoContent}>
           
           <div className={styles.smallCardTitle}>

@@ -1,6 +1,5 @@
 import React from 'react';
 import Banner from '../../../components/common/banner';
-import Grid from "@material-ui/core/Grid";
 import About1 from "../../../img/about1.png";
 import About2 from "../../../img/about2.png";
 import About3 from "../../../img/about3.png";

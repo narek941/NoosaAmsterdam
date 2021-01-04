@@ -1,5 +1,4 @@
 import React from 'react'
-import { NavLink as RouterNavLink } from 'react-router-dom';
 import { Button } from '@material-ui/core';
 
 const NoosaButton = ({ children, type, ...props }) => {
