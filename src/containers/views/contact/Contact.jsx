@@ -1,11 +1,12 @@
 import React from 'react';
-
+import {MapGoogle} from "../../../containers/items";
 const Contact = () => {
 
   return(
-    <h1>
-      Contact
-    </h1>
+    <>
+    
+      <MapGoogle/>
+    </>
   )
 }
 
