@@ -2,7 +2,7 @@ import React from "react";
 import Carousel from "react-material-ui-carousel";
 import NoosaButton from "../../buttons/NoosaButton";
 import styles from "./MainCarousel.module.css";
-import firs from "../../../img/carouselFirst.png";
+import first from "../../../img/carouselFirst.png";
 import second from "../../../img/carouselSecond.png";
 import third from "../../../img/carouselThird.png";
 
@@ -12,7 +12,7 @@ const MainCarousel = () => {
     {
       name: "New Collection",
       description: "Noosa Amsterdam Accessories that you create yourself",
-      img: firs,
+      img: first,
     },
     {
       name: "New Collection",

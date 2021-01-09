@@ -5,6 +5,7 @@ import Footer from './footer';
 import MainGift from './mainGift';
 import SignPopup from './popup/SignPop';
 import Banner from "./banner";
+import SearchProduct from "./searchProduct";
 
 export{
   Header,
@@ -14,4 +15,5 @@ export{
   MainGift,
   SignPopup,
   Banner,
+  SearchProduct,
 }
