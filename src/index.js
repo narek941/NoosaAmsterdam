@@ -1,43 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {Home, About, Product,Contact, MainLayout} from "./containers";
-import {BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import MainRouter from "./router";
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
+console.log(store.getState());
 ReactDOM.render(
-  <Router>
-    <MainLayout >
-      <Switch>
-        <Route
-          exact
-          component={Home}
-          path="/home"
-        />
-
-        <Route
-          exact
-          path="/product"
-          component={Product}
-        />
-
-        <Route
-          exact
-          path="/about"
-          component={About}
-        />
-        <Route
-          exact
-          path="/contact"
-          component={Contact}
-        />
-
-        <Route exact path="/" component={Home} />
-
-      </Switch>
-    </MainLayout>
-  </Router>,
-  document.getElementById('root')
+  <Provider store={store}>
+  <MainRouter/>
+  </Provider>
+  ,document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

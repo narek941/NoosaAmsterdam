@@ -24,7 +24,6 @@ const Product = () => {
 
   useEffect(() => {
     let pages = Math.ceil(totalCount / 9);
-    //pages = pages > 100 ? 100 : pages;
     setPageCount(pages);
     console.log(products);
 
@@ -37,8 +36,6 @@ const Product = () => {
       params: {
         per_page: 9,
         _page: passedPageNumber ? passedPageNumber : pageNumber,
-        //_limit: 9
-
       }
     }
     );
@@ -53,7 +50,7 @@ const Product = () => {
     <>
       <Banner />
       <section className={styles.section}>
-        <form className={styles.filter}>
+        {/* <form className={styles.filter}>
           Home / Products
           <table>
             <tr>
@@ -101,7 +98,7 @@ const Product = () => {
    
 
           </table>
-        </form>
+        </form> */}
 
         <div className={styles.productList}>
           SORT BY
@@ -122,7 +119,7 @@ const Product = () => {
             variant="outlined"
             shape="rounded"
             onChange={(ev, page) => {
-              setPageNumber(page)
+            setPageNumber(page)
             }} />
         </div>
 
