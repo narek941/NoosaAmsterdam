@@ -22,7 +22,7 @@ const dispatch = useDispatch();
             {/* {productInBasket} */}
           </div>
           <div className={styles.cardAction}>
-            <span onClick ={()=>dispatch(addProductInBasket())} className={styles.icon}><IconButton  type="basketOrange" /></span>
+            <span onClick ={()=>dispatch(addProductInBasket(item.id))} className={styles.icon}><IconButton  type="basketOrange" /></span>
             <span className={styles.btn}><NoosaButton  type="product">Shop Now</NoosaButton></span>
           </div>
         </div>

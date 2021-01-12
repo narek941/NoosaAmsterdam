@@ -8,6 +8,7 @@ const TypeLinks = ({ type, to, children, ...props }) => {
     textTransform: 'capitalize',
     margin: '0px 27px 0px 0px',
     color: '#F5F3F2',
+    justifyContent: 'flex-start',
   }
 
 

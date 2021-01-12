@@ -1,17 +1,18 @@
 import { ADD_PRODUCT, MINUS_PRODUCT } from '../actions/backetActions';
 
 const initialState = {
-    productInBasket: 0,
+    productInBasket: [],
 };
 function backetReducer(state = initialState, action) {
     switch (action.type) {
         case ADD_PRODUCT:
+            console.log(state)
             return {
-                productInBasket: state.productInBasket + 1,
+                productInBasket: [...state.productInBasket, action.payload],
             }
         case MINUS_PRODUCT:
             return {
-                productInBasket: state.productInBasket -1,
+               state,
             }
         }
             return state;
