@@ -6,9 +6,9 @@ const BacketPop = (...props) => {
 
   return (
         <div className={styles.popup}>  
-        <h3>Signggggg In</h3>
-            <NoosaButton type ="popup">Sign In</NoosaButton>
-            <TypeLinks>Create an account</TypeLinks>
+        <h3>Total</h3>
+            <NoosaButton type ="popup">close</NoosaButton>
+            <NoosaButton type ="popup">Checkout</NoosaButton>
         </div>
   )
 }
