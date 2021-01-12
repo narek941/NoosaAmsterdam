@@ -6,6 +6,8 @@ import IconButton from '../../../img/IconButton';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import InputBase from '@material-ui/core/InputBase';
 import SignPopup from '../popup/SignPop';
+import BacketPopup from '../popup/BacketPop';
+
 import {useSelector,useDispatch} from 'react-redux';
 import SearchProduct from "../searchProduct";
 
@@ -17,7 +19,8 @@ const useStyles = makeStyles((theme) => ({
 
 
 const Header = ({ children, ...props }) => {
-  const [showPopup, SetShowPopup] = useState(false);
+  const [showSignPopup, SetShowSignPopup] = useState(false);
+  const [showBacketPopup, SetShowBacketPopup] = useState(false);
   const classes = useStyles();
   const productInBasket = useSelector(state => state.Backet.productInBasket);
   return (
@@ -44,15 +47,19 @@ const Header = ({ children, ...props }) => {
         </div>
         <SearchProduct />
           <span><IconButton type='search' /></span>
-          <div className= "basket"><IconButton type='basket' /><span>{ productInBasket.length}</span></div>
-          <span  onClick={() => SetShowPopup(!showPopup)}>
+          <div  onClick={() => SetShowBacketPopup(!showBacketPopup)} className= "basket"><IconButton type='basket' /><span>{ productInBasket.length}</span></div>
+          <span  onClick={() => SetShowSignPopup(!showSignPopup)}>
             <IconButton type='user'/></span>
 
         {children}
 
       </Toolbar>
     </AppBar>
-    {showPopup ?
+    {showBacketPopup ?
+    <BacketPopup/> 
+    : null }
+    
+    {showSignPopup ?
     <SignPopup/> 
     : null }
     </>

@@ -5,6 +5,7 @@ import Footer from './footer';
 import MainGift from './mainGift';
 import SignPop from './popup/SignPop';
 import Banner from "./banner";
+import BacketPop from "./popup/BacketPop";
 
 export{
   Header,
@@ -14,5 +15,5 @@ export{
   MainGift,
   SignPop,
   Banner,
-  
+  BacketPop,
 }
