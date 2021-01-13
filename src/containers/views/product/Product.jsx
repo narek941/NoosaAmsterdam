@@ -2,11 +2,9 @@ import Banner from "../../../components/common/banner"
 import React, { useEffect, useState } from "react";
 import { ProductCardSmall } from "../../../components/common/productCard";
 import Grid from "@material-ui/core/Grid";
-import axios from "axios";
 import { Pagination } from '@material-ui/lab';
 import styles from "./Product.module.css";
-
-
+import * as Api from "../../../services/api";
 
 const Product = () => {
   const [products, setProducts] = useState([]);
@@ -15,36 +13,25 @@ const Product = () => {
   const [totalCount, setTotalCount] = useState();
 
   useEffect(() => {
-    fetchData(pageNumber);
+   const s = Api.getProductWithPassedPageNumber(pageNumber);
+   s.then(function (value) {
+    setProducts(value);
+    setTotalCount(value[0].total);
+  },)
   }, [pageNumber]);
 
   useEffect(() => {
-    fetchData(1);
+    const s = Api.getProductWithPassedPageNumber(1);
+    s.then(function (value) {setProducts(value);
+      setTotalCount(value[0].total);
+    },)
   }, []);
 
   useEffect(() => {
     let pages = Math.ceil(totalCount / 9);
     setPageCount(pages);
     console.log(products);
-
   }, [products, totalCount]);
-
-  const fetchData = async (passedPageNumber) => {
-
-    const response = await axios.get(
-      "https://my-json-server.typicode.com/narek941/FakeJSONPlaceholder/product", {
-      params: {
-        per_page: 9,
-        _page: passedPageNumber ? passedPageNumber : pageNumber,
-      }
-    }
-    );
-    const data = await response.data;
-    setProducts(data);
-    setTotalCount(data[0].total);
-    console.log(data[0].total);
-
-  };
 
   return (
     <>
@@ -122,8 +109,6 @@ const Product = () => {
             setPageNumber(page)
             }} />
         </div>
-
-
       </section>
     </>
   )

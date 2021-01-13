@@ -11,11 +11,11 @@ function backetReducer(state = initialState, action) {
             }
         case MINUS_PRODUCT:
             return {
-               state,
+                state,
             }
-        }
-            return state;
     }
+    return state;
+}
 
 
 export default backetReducer;
