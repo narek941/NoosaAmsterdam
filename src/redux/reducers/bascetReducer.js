@@ -6,7 +6,6 @@ const initialState = {
 function backetReducer(state = initialState, action) {
     switch (action.type) {
         case ADD_PRODUCT:
-            console.log(state)
             return {
                 productInBasket: [...state.productInBasket, action.payload],
             }

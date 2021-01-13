@@ -3,13 +3,13 @@ import { ProductCard } from "../productCard";
 import axios from "axios";
 import Grid from "@material-ui/core/Grid";
 import styles from "./ProductList.module.css";
-import {getLimitItems} from "../../../services/api";
+import * as Api from "../../../services/api";
 const ProductList = () => {
 const [products,setProducts] = useState([]);
   useEffect(() => {
  
    // fetchData();
-   const s=getLimitItems(6);
+   const s=Api.getLimitItems(6);
    s.then( function(value) { setProducts(value)},)
   }, []);
     
