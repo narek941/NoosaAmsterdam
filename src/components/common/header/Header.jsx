@@ -45,7 +45,7 @@ const Header = ({ children, ...props }) => {
             sale
         </TypeLinks>
         </div>
-        <SearchProduct />
+        {/* <SearchProduct /> */}
           <span><IconButton type='search' /></span>
           <div  onClick={() => SetShowBacketPopup(!showBacketPopup)} className= "basket"><IconButton type='basket' /><span>{ productInBasket.length}</span></div>
           <span  onClick={() => SetShowSignPopup(!showSignPopup)}>

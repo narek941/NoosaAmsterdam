@@ -3,28 +3,29 @@ import { ProductCard } from "../productCard";
 import axios from "axios";
 import Grid from "@material-ui/core/Grid";
 import styles from "./ProductList.module.css";
-
+import {getLimitItems} from "../../../services/api";
 const ProductList = () => {
 const [products,setProducts] = useState([]);
   useEffect(() => {
  
-    fetchData();
-    
+   // fetchData();
+   const s=getLimitItems(6);
+   s.then( function(value) { setProducts(value)},)
   }, []);
     
 
-  const fetchData = async () => {
-    try {
-      const response = await axios.get(
-        "https://my-json-server.typicode.com/narek941/FakeJSONPlaceholder/product"
-      );
-      const data = await response.data;
-      setProducts(data);
-    } catch (e) {
-    } finally {
+  // const fetchData = async () => {
+  //   try {
+  //     const response = await axios.get(
+  //       "https://my-json-server.typicode.com/narek941/FakeJSONPlaceholder/product"
+  //     );
+  //     const data = await response.data;
+  //     setProducts(data);
+  //   } catch (e) {
+  //   } finally {
     
-    }
-  };
+  //   }
+  // };
 
 
   return (
