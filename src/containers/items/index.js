@@ -1,6 +1,6 @@
 import CarouselItem from "./CarouselItem";
-import MapGoogle from "./MapGoogle";
+import Map from "./Map";
 export{
     CarouselItem,
-    MapGoogle
+    Map
 };

@@ -1,0 +1,70 @@
+.form {
+ 
+    width: 664px;
+    padding-left: 350px;
+}
+.input-form{
+    display: flex;
+    margin: 20px;
+
+}
+
+.form-textarea {
+    margin-bottom: 20px;
+    width: 664px;
+    background: #686261;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #F5F3F2;
+    min-height: 200px;
+    border-radius: 10px;
+
+}
+      
+  /* @media screen and (min-width: 799px) {
+    .form {
+      display: grid;
+      grid-template-areas:
+        'header .'
+        'name message'
+        'tel message'
+        'email submit';
+      align-items: start;
+      align-content: space-between;
+      justify-content: unset;
+      gap: 0.5vw 1vw;
+      padding: 40px;
+    }
+  
+    .form-h2 {
+      grid-area: header;
+      text-align: left;
+    }
+  
+    .form-label {
+      margin: 0;
+    }
+  
+    #name {
+      grid-area: name;
+    }
+    #email {
+      grid-area: email;
+    }
+    #tel {
+      grid-area: tel;
+    }
+  
+    #message {
+      grid-area: message;
+      height: 100%;
+    }
+  
+    .form-textarea {
+      height: 150px;
+    }
+  
+    .form-submit {
+      grid-area: submit;
+    }
+  } */
