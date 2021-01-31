@@ -1,4 +1,4 @@
-import {Home, About, Product,Contact, MainLayout} from "../containers";
+import {Home, About, Product,Contact, MainLayout,SignIn} from "../containers";
 import {BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import React from 'react';
 
@@ -29,6 +29,12 @@ return(
           path="/contact"
           component={Contact}
         />
+         <Route
+          exact
+          path="/signIn"
+          component={SignIn}
+        />
+        
 
         <Route exact path="/" component={Home} />
 

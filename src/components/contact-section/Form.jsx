@@ -10,14 +10,15 @@ const formInputs = []
 const Form = () => (
   <form className="form">
     <h2 className="form-h2">Contact form</h2>
-    <div className="input-form"><TextField id="standard-basic" label="Your name" className="form-label" />
-      <TextField id="standard-basic" label="Your name" className="form-label" />
+    <div className="input-form">
+      <input type="text" placeholder="Your name" className="form-label" />
+      <input type="text" placeholder="Your name" className="form-label" />
     </div>
-    <TextareaAutosize placeholder="Message..." className="form-textarea" />
+    <textarea  placeholder="Message..." className="form-textarea" />
     <NoosaButton className="form-submit">
-      Send message
+      Send
     </NoosaButton>
   </form>
 )
 
-export default Form
+export default Form;

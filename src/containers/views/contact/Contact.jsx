@@ -4,9 +4,9 @@ import ContactSection from '../../../components/contact-section/ContactSection'
 
 const Contact = () => {
   const location = {
-    address: '1600 Amphitheatre Parkway, Mountain View, california.',
-    lat: 37.42216,
-    lng: -122.08427,
+    address: '4 Հակոբ Հակոբյան փողոց, Երևան.',
+    lat: 40.198480, 
+    lng: 44.491525,
   } 
   
   return(

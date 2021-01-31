@@ -11,7 +11,7 @@ const HeaderLogo = ({ type, to, children, ...props }) => {
     width: '165px',
     height: '57px',
     left: '150px',
-    marginRight: '305.33px',
+    marginRight: '477px',
     
 
   };
