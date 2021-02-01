@@ -7,7 +7,7 @@ const SignPop = (...props) => {
         <div className={styles.popup}>  
         <h3>Sign In</h3>
             <NoosaButton type ="popup" to= '/signIn'>Sign In</NoosaButton>
-            <TypeLinks>Create an account</TypeLinks>
+            <TypeLinks type ="navigation" to='/signUp'>Create an account</TypeLinks>
         </div>
   )
 }

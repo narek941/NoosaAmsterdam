@@ -44,13 +44,14 @@
 .btn{
     margin-left: 256px;
 }
-.icon{
+.iconBasket{
     background-color:#CF8957;
     border-radius: 4px;
     opacity: 1;
     width: 36px;
     height: 36px;
     display:table;
+
 }
 
 .smallCardContainer{
@@ -111,5 +112,17 @@
     display:table;
 }
 
-
-
+.like{
+    top: 24px;
+    right: 24px;
+    position: absolute;
+    background-color: #CF8957;
+    width:40px;
+    height:40px;
+}
+.likeSmall{
+    top: 13px;
+    right: 13px;
+    position: absolute;
+    background-color: #CF8957;
+}

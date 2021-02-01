@@ -33,8 +33,8 @@ const NoosaButton = ({ to, children, type, ...props }) => {
         borderRadius: '4px',
         opacity: 1,
         color: '#F5F3F2',
-        width: '228px',
-        height: '49px',
+        width: '200px',
+        height: '42px',
     };
     const submit = {
         background: '#CF8957 0% 0% no-repeat padding-box',
@@ -43,6 +43,15 @@ const NoosaButton = ({ to, children, type, ...props }) => {
         color: '#F5F3F2',
         width: '430px',
         height: '48px',
+    };
+    const register = {
+        background: '#CF8957 0% 0% no-repeat padding-box',
+        borderRadius: '10px',
+        opacity: 1,
+        color: '#F5F3F2',
+        width: '200px',
+        height: '48px',
+        left: '60px',
     };
     switch (type) {
         case 'productSmall':
@@ -57,9 +66,13 @@ const NoosaButton = ({ to, children, type, ...props }) => {
             return (
                 <Button component={RouterNavLink} to={to} style={popupButton}>{children}</Button>
             )
-            case 'submit':
+        case 'submit':
             return (
                 <Button type="submit" variant="contained" style={submit}>{children}</Button>
+            )
+        case 'register':
+            return (
+                <Button type="register" variant="contained" style={register}>{children}</Button>
             )
         default:
             return (

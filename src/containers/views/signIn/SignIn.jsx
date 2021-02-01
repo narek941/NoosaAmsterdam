@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './SignIn.module.css';
 import { TypeLinks, NoosaButton } from '../../../components/buttons';
-
+import Tick from '../../../img/Tick';
 const SignIn = (...props) => {
 
   const [email, setEmail] = useState("");
@@ -54,7 +54,11 @@ const SignIn = (...props) => {
                 onChange={(e) => setPassword(e.target.value)} />
             </div>
             <div className={styles.formCheck}>
-              <label>
+              <label className={styles.checkboxLabel}>
+              {rememberpassword &&
+              <span className={styles.tick}> <Tick/></span>
+                
+              }
                 <input
                   type="checkbox"
                   className={styles.formCheckInput}

@@ -1,5 +1,3 @@
 import ProductDetail from './ProductDetail';
 
-export{
-    ProductDetail
-}
+export default  ProductDetail;

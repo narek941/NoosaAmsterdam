@@ -1,4 +1,4 @@
-import {Home, Product, About,Contact,SignIn} from './views';
+import {Home,SignUp, Product, About,Contact,SignIn,ProductDetail} from './views';
 import {MainLayout} from './layouts';
 import {CarouselItem} from './items';
 
@@ -10,5 +10,7 @@ export {
   MainLayout,
   Contact,
   CarouselItem,
+  SignUp,
+  ProductDetail
 }
 

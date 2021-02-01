@@ -4,6 +4,8 @@ import IconButton from "../../../img/IconButton";
 import styles from "./ProductCard.module.css";
 import {useSelector,useDispatch} from 'react-redux';
 import {addProductInBasket,minusProductInBasket} from "../../../redux/actions/backetActions";
+import Like from '../../../img/Like';
+import { NavLink as RouterNavLink } from 'react-router-dom';
 
 const ProductCard = (products) => {
   const productInBasket = useSelector(state => state.Backet.productInBasket);
@@ -20,11 +22,12 @@ const ProductCard = (products) => {
             <span>{item.price}$</span>
           </div>
           <div className={styles.cardAction}>
-            <span onClick ={()=>dispatch(addProductInBasket(item.id))} className={styles.smallIcon}><IconButton type="basketOrange" /></span>
+            <span onClick ={()=>dispatch(addProductInBasket(item.id))} className={styles.smallIconBasket}><IconButton type="basketOrange" /></span>
             <span className={styles.smallBtn}><NoosaButton  type="product">Shop Now</NoosaButton></span>
           </div>
         </div>
       </div>
+      <span className={styles.likeSmall}><Like/></span>
     </div>
   ));
 };
