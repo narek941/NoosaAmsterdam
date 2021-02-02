@@ -38,7 +38,7 @@ const NoosaButton = ({ children, type, ...props }) => {
             )
         default:
             return (
-                <Button style={shopButton}>{children}</Button>
+                <Button style={shopButton} >{children}</Button>
             )
     }
 
