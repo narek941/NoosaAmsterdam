@@ -30,7 +30,12 @@ const ProductDetail = () => {
         <section className={styles.sectionProductDetail}>
             <span className={styles.mainH}>Home / Products / {item.sex} / {item.category}</span>
             <div className={styles.mainProductDetail}>
+                <div className={styles.imgAndLike}>
                 <img className={styles.ProductDetailImg} src={item.img} alt="img" />
+                    <span className={styles.ProductDetailLike}><Like/></span>
+                </div>
+                
+                
                 <div className={styles.cardDetailInfoContent}>
                     <div className={styles.cardDetailTitle}>
                         {item.title}
@@ -57,7 +62,7 @@ const ProductDetail = () => {
                         <div className={styles.ProductDetailText}>{item.details}</div>
                     </div>
                 </div>
-            <span className={styles.ProductDetailLike}><Like/></span>
+                
             </div>
             <div className={styles.similarProduct}>
                 <img className={styles.similarProductImg} src={item.img} alt="img1" />
