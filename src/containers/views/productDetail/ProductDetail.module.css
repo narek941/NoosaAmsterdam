@@ -1,3 +1,17 @@
+.sectionProductDetail{
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.mainH{
+    text-align: left;
+    font-size: 24px ;
+    letter-spacing: 0px;
+    color: #3D3D3B;
+    opacity: 1;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 40px;
+}
 .mainProductDetail{
     color: #3D3D3B;
     display: flex;
@@ -6,6 +20,7 @@
     width: 780px;
     height: 811px;
     display: block;
+    margin-right: 32px;
 }
 .cardDetailInfoContent{
     display: inline;
@@ -16,28 +31,84 @@
 }
 .cardDetailTitle{
     font-size: 36px;
+    margin-bottom: 24px;
 
 }
 .cardDetailDescription{
     width: 435px;
     font-size: 24px;
     letter-spacing: 0px;
+    margin-bottom: 16px;
 }
 .cardDetailPrice{
     font-size: 36px; 
+    margin-bottom: 13px;
 }
 .cardDetailSizeContainer{
-    border-radius: 2.2rem;
-    border: 1px solid #000;
-    max-width: 180px;
+    border: solid 1px #675f6b;
+    display: inline-flex;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 38px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.sizeInput{
+   position: absolute;
+   opacity: 0;
+   width: 50px;
+   height: 38px;
+   margin:  auto;
+   margin-left: 5px;
+}
+.sizeLabel{
+    color: #9a929e;
+	 display: inline-block;
+	 cursor: pointer;
+	 font-weight: bold;
+	 padding: 5px 20px;
+ }
+.sizeInput:checked + .sizeLabel {
+    color: #CECACA;
+    background: #CF8957;
+    height: 38px;
+}
+.btnProductDetail{
+    width: 232px;
     height: 40px;
+    border-radius: 10px;
 }
-.cardDetailSize{
-    width: 60px;
-    height: 38px;
-    margin: 0.2rem;
+.ProductDetail{
+   display: grid;
 }
-.cardDetailRadio{
-    width: 60px;
-    height: 38px;
+.ProductDetailTextTitle{
+margin: auto;
+font-size: 24px;
+font-weight: 600;
+margin-bottom: 24px;
+}
+.ProductDetailText{
+    width: 548px;
+    font-size: 16px;
+    text-align: left;
+    opacity: 1;
+}
+.similarProduct{
+    width: 795px;
+    height: 250px;
+    margin-top: 16px;
+}
+.similarProductImg{
+    width: 249px;
+    height: 249px;
+    margin-right: 16px;
+}
+.ProductDetailLike{
+    top: 24px;
+    right: 24px;
+    position: absolute;
+    background-color: #CF8957;
+    width:40px;
+    height:40px;
 }
