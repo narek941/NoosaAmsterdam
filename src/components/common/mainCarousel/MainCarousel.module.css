@@ -9,7 +9,7 @@
   padding: 0;
   background-size: cover;
 }
-  .slider_itemContent {
+.slider_itemContent {
     text-align: left;
     padding-left: 200px;
     margin: 0 auto;
@@ -17,7 +17,7 @@
     top: 26%;
   
   }
-  .slider_title{
+.slider_title{
     font-size: 54px;
     line-height: 65px;
     color: #F5F3F2;
@@ -30,8 +30,5 @@
     font-size: 36px;
     color: #F5F3F2;
     margin-bottom: 50px;
-  }
-<<<<<<< HEAD
+}
  
-=======
->>>>>>> 57e35ec2e7c7a8c400f01b097049c639523d5732

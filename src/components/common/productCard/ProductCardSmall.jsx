@@ -16,10 +16,9 @@ const ProductCard = (products) => {
       <div>
         <img className={styles.smallCard} src={item.img} alt="img" />
         <div className={styles.smallCardInfoContent}>
-          
-          <div className={styles.smallCardTitle}>
-            {item.title}
-            <span>{item.price}$</span>
+        <div>
+          <span className={styles.smallCardTitle}>{item.title}</span>  
+            <span className={styles.smallCardPrice}>{item.price}$</span>
           </div>
           <div className={styles.cardAction}>
             <span onClick ={()=>dispatch(addProductInBasket(item.id))} className={styles.smallIconBasket}><IconButton type="basketOrange" /></span>
