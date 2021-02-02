@@ -1,6 +1,8 @@
-import SignPopup from './SignPopup';
+import SignPop from './SignPop';
+import BacketPop from './BacketPop';
 
 
 export{
-SignPopup,
+SignPop,
+BacketPop,
 }

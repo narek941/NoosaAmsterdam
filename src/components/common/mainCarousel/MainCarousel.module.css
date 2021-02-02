@@ -2,7 +2,6 @@
 .slider{
   position: relative;
   background-repeat: no-repeat;
-  background-image: url(../../../img/carouselFirst.png);
   background-position: center;
   min-height: 410px;
   margin: 0;
@@ -32,4 +31,7 @@
     color: #F5F3F2;
     margin-bottom: 50px;
   }
+<<<<<<< HEAD
  
+=======
+>>>>>>> 57e35ec2e7c7a8c400f01b097049c639523d5732

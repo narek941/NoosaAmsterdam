@@ -1,7 +1,7 @@
+
 body {
   margin: 0;
-  font-family: 'Roboto'
-    ;
+  font-family: 'Roboto';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
@@ -14,3 +14,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+section {
+  max-width: 1340px; 
+  margin: 0 auto;
+  padding: 0 15px;
+   } 

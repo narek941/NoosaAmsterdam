@@ -1,7 +1,6 @@
 import React from 'react'
 import { Button } from '@material-ui/core';
 import { NavLink as RouterNavLink } from 'react-router-dom';
-import { makeStyles } from '@material-ui/core/styles';
 
 const TypeLinks = ({ type, to, children, ...props }) => {
   const mystyle = {
@@ -9,6 +8,15 @@ const TypeLinks = ({ type, to, children, ...props }) => {
     textTransform: 'capitalize',
     margin: '0px 27px 0px 0px',
     color: '#F5F3F2',
+    justifyContent: 'flex-start',
+  }
+  const mystyleBig = {
+    opacity: 1,
+    textTransform: 'capitalize',
+    margin: '0px 27px 0px 0px',
+    color: '#F5F3F2',
+    justifyContent: 'flex-start',
+    fontSize: '24px',
   }
 
 
@@ -19,7 +27,12 @@ const TypeLinks = ({ type, to, children, ...props }) => {
           {children}
         </Button>
       )
-
+      case 'navigationBig':
+        return (
+          <Button style={mystyleBig} component={RouterNavLink} to={to}  >
+            {children}
+          </Button>
+        )
     default:
       return (
         <Button style={mystyle} color="inherit">

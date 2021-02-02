@@ -1,0 +1,32 @@
+.pagination{
+   
+    margin-top: 50px;
+    width: fit-content;
+    margin-left: 350px;
+}
+
+.productList{
+    max-width: 1020px;
+    margin-left: 350px;
+}
+.section{
+    position: relative;
+
+}
+.filter{
+    width: 183px;
+    position: absolute;
+    left: 0;
+    text-align: left;
+    font: normal normal bold 16px/19px Roboto;
+    letter-spacing: 0px;
+    color: #3D3D3B;
+    opacity: 1;
+    
+}
+.filter th{
+ margin-top: 31px;
+ margin-bottom: 31px;
+ margin-right: 187px;
+    
+}

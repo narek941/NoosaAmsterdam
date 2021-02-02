@@ -3,7 +3,9 @@ import MainCarousel from './mainCarousel';
 import ProductList from './productList';
 import Footer from './footer';
 import MainGift from './mainGift';
-import SignPopup from './popup/SignPop';
+import SignPop from './popup/SignPop';
+import Banner from "./banner";
+import BacketPop from "./popup/BacketPop";
 
 export{
   Header,
@@ -11,5 +13,7 @@ export{
   ProductList,
   Footer,
   MainGift,
-  SignPopup,
+  SignPop,
+  Banner,
+  BacketPop,
 }

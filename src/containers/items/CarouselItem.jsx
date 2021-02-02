@@ -1,4 +1,4 @@
-const CarouselItem = () =>{
+const CarouselItem = (props) =>{
     var items = [
         {
             name: "Random Name #1",
@@ -12,8 +12,6 @@ const CarouselItem = () =>{
             name: "New collection",
             description: "Hello World!"
         }
-    ]
-
-   
+    ]  
 }
 export default CarouselItem;

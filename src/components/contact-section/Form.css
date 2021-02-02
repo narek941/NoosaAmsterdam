@@ -1,0 +1,83 @@
+.form {
+ 
+    width: 664px;
+    padding-left: 350px;
+}
+.form-label {
+  border: none;
+  width: 254px;
+  border-bottom: 1px solid #707070;
+  margin-right: 100px;
+  padding: 5px;
+}
+
+.input-form{
+    display: flex;
+    margin-bottom: 81px;
+}
+.loginInput:focus {
+  outline: none;
+}
+.form-textarea {
+    margin-bottom: 20px;
+    width: 648px;
+    background: #686261;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #F5F3F2;
+    min-height: 200px;
+    border-radius: 10px;
+    padding: 16px;
+    color: #F5F3F2;
+
+}
+.form-textarea:focus {
+  outline: none;
+}     
+  /* @media screen and (min-width: 799px) {
+    .form {
+      display: grid;
+      grid-template-areas:
+        'header .'
+        'name message'
+        'tel message'
+        'email submit';
+      align-items: start;
+      align-content: space-between;
+      justify-content: unset;
+      gap: 0.5vw 1vw;
+      padding: 40px;
+    }
+  
+    .form-h2 {
+      grid-area: header;
+      text-align: left;
+    }
+  
+    .form-label {
+      margin: 0;
+    }
+  
+    #name {
+      grid-area: name;
+    }
+    #email {
+      grid-area: email;
+    }
+    #tel {
+      grid-area: tel;
+    }
+  
+    #message {
+      grid-area: message;
+      height: 100%;
+    }
+  
+    .form-textarea {
+      height: 150px;
+    }
+  
+    .form-submit {
+      grid-area: submit;
+    }
+  } */

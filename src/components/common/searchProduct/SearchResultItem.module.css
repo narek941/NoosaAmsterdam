@@ -1,0 +1,21 @@
+.card{
+    position: relative;
+    width: 430px;
+    height: 120px;
+    margin: 16px;
+}
+.img{
+    width: 116px;
+    height: 116px;
+
+}
+
+.info{
+    position: absolute;
+    padding-left: 150px;
+    top: 50%;
+}
+.price{
+   font-size: 26px;
+   margin: 10px;
+}
