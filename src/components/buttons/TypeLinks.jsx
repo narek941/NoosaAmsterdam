@@ -6,14 +6,12 @@ const TypeLinks = ({ type, to, children, ...props }) => {
   const mystyle = {
     opacity: 1,
     textTransform: 'capitalize',
-    margin: '0px 27px 0px 0px',
     color: '#F5F3F2',
     justifyContent: 'flex-start',
   }
   const mystyleBig = {
     opacity: 1,
     textTransform: 'capitalize',
-    margin: '0px 27px 0px 0px',
     color: '#F5F3F2',
     justifyContent: 'flex-start',
     fontSize: '24px',

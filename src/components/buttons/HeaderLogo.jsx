@@ -18,7 +18,6 @@ const HeaderLogo = ({ type, to, children, ...props }) => {
     backgroundImage: `url(${noosaLogo})`,
     width: '165px',
     height: '57px',
-    margin: '11px 305.33px 12px 0px',
   };
   switch (type) {
     case 'header':
