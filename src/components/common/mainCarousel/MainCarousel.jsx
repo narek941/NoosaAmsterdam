@@ -6,7 +6,6 @@ import first from "../../../img/carouselFirst.png";
 import second from "../../../img/carouselSecond.png";
 import third from "../../../img/carouselThird.png";
 
-
 const MainCarousel = () => {
   var items = [
     {
@@ -24,11 +23,10 @@ const MainCarousel = () => {
       description: "Noosa Amsterdam Accessories that you create yourself",
       img: third,
     },
-   
   ];
 
   return (
-    <Carousel navButtonsAlwaysVisible	='true' >
+    <Carousel navButtonsAlwaysVisible="true">
       {items.map((item, i) => (
         <Item key={i} item={item} />
       ))}
@@ -37,15 +35,18 @@ const MainCarousel = () => {
 };
 
 function Item(props) {
-
   return (
-    <div className={styles.slider} style={{ backgroundImage: `url(${props.item.img})`}} >
-      <div className={styles.slider_itemContent}>
-        <div className={styles.slider_title} >{props.item.name}</div>
-        <div className={styles.slider_text} >{props.item.description}</div>
-
-        <NoosaButton>Shop Now</NoosaButton>
-      </div>
+    <div
+      className={styles.slider}
+      style={{ backgroundImage: `url(${props.item.img})` }}
+    >
+      <section>
+        <div className={styles.slider_itemContent}>
+          <div className={styles.slider_title}>{props.item.name}</div>
+          <div className={styles.slider_text}>{props.item.description}</div>
+          <NoosaButton>Shop Now</NoosaButton>
+        </div>
+      </section>
     </div>
   );
 }

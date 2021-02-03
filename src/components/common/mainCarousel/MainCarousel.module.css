@@ -1,6 +1,5 @@
 
 .slider{
-  position: relative;
   background-repeat: no-repeat;
   background-position: center;
   min-height: 410px;
@@ -11,11 +10,7 @@
 }
 .slider_itemContent {
     text-align: left;
-    padding-left: 200px;
-    margin: 0 auto;
-    position: absolute;
-    top: 26%;
-  
+    padding-block: 142px;
   }
 .slider_title{
     font-size: 54px;
@@ -23,12 +18,12 @@
     color: #F5F3F2;
     font-weight: 500;
     letter-spacing: 1.5px;
-    margin-bottom: 22px;
+    margin-bottom: 32px;
   }
 .slider_text{
     line-height: 44px;
     font-size: 36px;
     color: #F5F3F2;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
  
