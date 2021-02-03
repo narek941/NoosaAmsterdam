@@ -53,6 +53,14 @@ const NoosaButton = ({ to, children, type, ...props }) => {
         height: '48px',
         left: '60px',
     };
+    const simple = {
+        background: '#CF8957 0% 0% no-repeat padding-box',
+        borderRadius: '10px',
+        opacity: 1,
+        color: '#F5F3F2',
+        width: '232px',
+        height: '40px',
+    };
     switch (type) {
         case 'productSmall':
             return (
@@ -72,11 +80,15 @@ const NoosaButton = ({ to, children, type, ...props }) => {
             )
         case 'register':
             return (
-                <Button type="register" variant="contained" style={register}>{children}</Button>
+                <Button  variant="contained" style={register}>{children}</Button>
+            )
+            case 'simple':
+            return (
+                <Button style={simple}>{children}</Button>
             )
         default:
             return (
-                <Button style={shopButton}>{children}</Button>
+                <Button style={shopButton} >{children}</Button>
             )
     }
 

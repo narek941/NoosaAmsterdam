@@ -7,26 +7,25 @@
 
 .productList{
     max-width: 1020px;
-    margin-left: 350px;
 }
-.section{
+.productSection{
     position: relative;
+    display: flex;
+    color: #3D3D3B;
+    margin-top: 80px;
 
 }
-.filter{
-    width: 183px;
-    position: absolute;
-    left: 0;
-    text-align: left;
-    font: normal normal bold 16px/19px Roboto;
-    letter-spacing: 0px;
-    color: #3D3D3B;
-    opacity: 1;
-    
+.filterTitle{
+    font-size: 24px;
 }
-.filter th{
- margin-top: 31px;
- margin-bottom: 31px;
- margin-right: 187px;
-    
+.filterContainer{
+    width: 218px;
+    margin-right: 133px;
+}
+.filterCheck{
+    display: grid;
+    text-align: left;
+}
+.filterCheck input{
+    float: right;
 }
