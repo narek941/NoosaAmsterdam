@@ -12,10 +12,8 @@
 
 .info{
     position: absolute;
-    padding-left: 150px;
     top: 50%;
 }
 .price{
    font-size: 26px;
-   margin: 10px;
 }

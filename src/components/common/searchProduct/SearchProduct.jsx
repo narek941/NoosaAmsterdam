@@ -46,7 +46,7 @@ const SearchProduct = () => {
   }
 
   return (
-    <div>
+    <>
       <InputBase
         type="text"
         value={searchString}
@@ -60,7 +60,7 @@ const SearchProduct = () => {
         }
       />
       <SearchList filter={searchString} />
-    </div>
+    </>
   );
 };
 
