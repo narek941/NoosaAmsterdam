@@ -5,6 +5,7 @@ const Banner = (props) => {
 
   return (
     <div className={styles.mainStyle} >
+      <section>
       <div className={styles.content}>
           <div className={styles.text}>
             Tell your story with the unique Noosa Amsterdam collection
@@ -13,6 +14,8 @@ const Banner = (props) => {
                   <NoosaButton >Shop Now</NoosaButton>
               </div>
       </div>
+      </section>
+      
     </div>
 
 

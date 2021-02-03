@@ -4,10 +4,12 @@
     min-height: 400px;
     border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 32px auto;
+    margin: 40px 0px 40px 32px;
     text-align: center;
     opacity: 1;
     position: relative;
+    display: inline-block;
+    margin: 40px 7px;
 }
 .card{
     height: 445px;
@@ -51,10 +53,12 @@
     height: 400px;
     border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 32px auto;
+    margin: 0 auto;
     text-align: center;
     opacity: 1;
     position: relative;
+    display: inline-block;
+    margin: 40px 7px;
 }
 .smallCard{
     height: 323px;

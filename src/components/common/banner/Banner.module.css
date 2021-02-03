@@ -11,10 +11,8 @@
   }
 
   .content{
-    transform: translateY(50%);
     position: absolute;
-    left:130px;
-    padding: 40px;
+    padding-block: 128px;
   }
   .text{
     margin: auto;
@@ -29,6 +27,6 @@
     font-weight: 600;
   }
   .button{
-    padding-top: 20px;
+    margin-top: 32px;
     position: absolute;
   }
