@@ -29,12 +29,16 @@ const Header = ({ children, ...props }) => {
           <label className={styles.searchLine}>
             <SearchProduct />
             <IconButton type="search" />
+            <label className={styles.basketLabel}>
             <IconButton
               type="basket"
               onClick={() => setShowBacketPopup(!showBacketPopup)}
               className={styles.basket}
             />
-            <span className={styles.basketcount}>{productInBasket.length}</span>
+            <span className={styles.basketCount}>
+              {productInBasket.length}
+              </span>
+            </label>
             <IconButton
               type="user"
               onClick={() => setShowSignPopup(!showSignPopup)}
