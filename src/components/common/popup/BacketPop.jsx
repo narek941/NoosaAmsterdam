@@ -5,7 +5,7 @@ import {TypeLinks,NoosaButton} from '../../buttons';
 const BacketPop = (...props) => {
 
   return (
-        <div className={styles.popup}>  
+        <div className={styles.backetPopup}>  
         <h3>Total</h3>
             <NoosaButton type ="popup" to="/basket">close</NoosaButton>
             <NoosaButton type ="popup" to="/basket">Checkout</NoosaButton>

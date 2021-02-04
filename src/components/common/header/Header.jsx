@@ -29,27 +29,27 @@ const Header = ({ children, ...props }) => {
           <label className={styles.searchLine}>
             <SearchProduct />
             <IconButton type="search" />
-            <label className={styles.basketLabel}>
-            <IconButton
-              type="basket"
+            <label
+              className={styles.basketLabel}
               onClick={() => setShowBacketPopup(!showBacketPopup)}
-              className={styles.basket}
-            />
-            <span className={styles.basketCount}>
-              {productInBasket.length}
+            >
+              <IconButton type="basket" className={styles.basket} />
+              <span className={styles.basketCount}>
+                {productInBasket.length}
               </span>
+              {showBacketPopup ? <BacketPopup /> : null}
             </label>
-            <IconButton
-              type="user"
-              onClick={() => setShowSignPopup(!showSignPopup)}
-            />
+            <label onClick={() => setShowSignPopup(!showSignPopup)}>
+              <IconButton
+                type="user"
+              />
+              {showSignPopup ? <SignPopup /> : null}
+            </label>
           </label>
 
           {children}
         </section>
       </div>
-      {showBacketPopup ? <BacketPopup /> : null}
-      {showSignPopup ? <SignPopup /> : null}
     </>
   );
 };

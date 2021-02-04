@@ -4,7 +4,7 @@ import {TypeLinks,NoosaButton} from '../../buttons';
 const SignPop = (...props) => {
 
   return (
-        <div className={styles.popup}>  
+        <div className={styles.signPopup}>  
         <h3>Sign In</h3>
             <NoosaButton type ="popup" to= '/signIn'>Sign In</NoosaButton>
             <TypeLinks type ="navigation" to='/signUp'>Create an account</TypeLinks>
