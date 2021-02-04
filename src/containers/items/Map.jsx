@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
-import './Map.css';
+import styles from './Map.module.css';
 
 const LocationPin = ({ text }) => (
   <div className="pin">
-    <LocationOnIcon className="pin-icon" />
-    <p className="pin-text">{text}</p>
+    <LocationOnIcon className={styles.pinIcon} />
+    <p className={styles.pinText}>{text}</p>
   </div>
 )
 
 const Map = ({ location, zoomLevel }) => {
   return(
-  <div className="map">
-   <div className="google-map">
+  <div className={styles.map}>
+   <div className={styles.googleMap}>
     <GoogleMapReact
       bootstrapURLKeys={{ key: 'AIzaSyAjyh7h3cKKPMzejGlgqb1S5Iz98S1r2mw'}}
       defaultCenter={location}
