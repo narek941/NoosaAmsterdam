@@ -8,7 +8,7 @@ const BacketPop = (...props) => {
         <div className={styles.backetPopup}>  
         <h3>Total</h3>
             <NoosaButton type ="popup" to="/basket">close</NoosaButton>
-            <NoosaButton type ="popup" to="/basket">Checkout</NoosaButton>
+            <NoosaButton type ="popup" to="/order">Checkout</NoosaButton>
         </div>
   )
 }

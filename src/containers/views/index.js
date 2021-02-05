@@ -5,6 +5,7 @@ import Contact from './contact';
 import SignIn from './signIn';
 import SignUp from './signUp';
 import ProductDetail from './productDetail';
+import Order from './order';
 
 export{
   Home,
@@ -14,4 +15,5 @@ export{
   SignIn,
   SignUp,
   ProductDetail,
+  Order,
 };
