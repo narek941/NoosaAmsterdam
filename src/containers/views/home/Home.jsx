@@ -1,13 +1,13 @@
-import React from 'react';
-import {MainCarousel,MainGift,ProductList} from '../../../components';
+import React from "react";
+import { MainCarousel, MainGift, ProductList } from "../../../components";
 
 const Home = () => {
-  return(
+  return (
     <>
-      <MainCarousel/>
-      <ProductList/>
-      <MainGift/>
-</>
-  )
-}
+      <MainCarousel />
+      <ProductList />
+      <MainGift />
+    </>
+  );
+};
 export default Home;
