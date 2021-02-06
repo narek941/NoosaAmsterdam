@@ -6,6 +6,7 @@ import MainGift from './mainGift';
 import SignPop from './popup/SignPop';
 import Banner from "./banner";
 import BacketPop from "./popup/BacketPop";
+import SizeChartTable from "./sizeChartTable";
 
 export{
   Header,
@@ -16,4 +17,5 @@ export{
   SignPop,
   Banner,
   BacketPop,
+  SizeChartTable,
 }

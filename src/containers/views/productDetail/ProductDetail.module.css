@@ -137,3 +137,6 @@
   margin-bottom: 16px;
 }
 
+.ProductDetailBtnDiv{
+  display: grid;
+}

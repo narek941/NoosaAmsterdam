@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import styles from "./ProductDetail.module.css";
-import { TypeLinks, NoosaButton } from "../../../components/buttons";
+import {NoosaButton } from "../../../components/buttons";
 import Rating from "@material-ui/lab/Rating";
 import Like from "../../../img/Like";
 import { ProductCardSmall } from "../../../components/common/productCard";
 import Grid from "@material-ui/core/Grid";
+import {SizeChartTable} from "../../../components";
 import * as Api from "../../../services/api";
+
+
 
 const item = {
   color: "White",
@@ -25,34 +28,6 @@ const item = {
   total: 24,
   reviw: 4,
   reviwCount: 10,
-};
-const SizeChartTable = () => {
-  return (
-    <label classname={styles.sizeChartTable}>
-      <thead>
-        <tr classname={styles.sizeChartTableTr}>
-          <th>Size</th>
-          <th>XS</th>
-          <th>S</th>
-          <th>M</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr classname={styles.sizeChartTableTr}>
-          <td>in one turn (cm)</td>
-          <td></td>
-          <td>to 16</td>
-          <td>16 -19</td>
-        </tr>
-        <tr classname={styles.sizeChartTableTr}>
-          <td>double / triple (cm)</td>
-          <td>to 14</td>
-          <td>to 14 -17</td>
-          <td>17 -20</td>
-        </tr>
-      </tbody>
-    </label>
-  );
 };
 
 const ProductDetail = () => {
@@ -102,7 +77,7 @@ const ProductDetail = () => {
               <NoosaButton type="productSmall">Qty:1</NoosaButton>
             </span>
             <span className={styles.detailActionSize}>
-              <div>
+              <div className={styles.ProductDetailBtnDiv}>
                 <span className={styles.btnProductDetail}>
                   <NoosaButton type="simple">Add to chart</NoosaButton>
                 </span>
@@ -111,7 +86,7 @@ const ProductDetail = () => {
                 </span>
               </div>
               <div>
-              <SizeChartTable />
+              <SizeChartTable/>
               </div>
             </span>
             <div>
