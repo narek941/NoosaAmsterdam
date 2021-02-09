@@ -1,3 +1,3 @@
-import MainGift from './MainGift';
+import MainGift from './mainGift';
 
 export default MainGift;
