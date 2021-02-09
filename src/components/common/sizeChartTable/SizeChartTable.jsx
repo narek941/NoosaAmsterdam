@@ -4,7 +4,9 @@ import styles from "./SizeChartTable.module.css";
 const SizeChartTable = () => {
     return (
       <div className={styles.sizeChartTableDiv}>
-        <span>Size Table</span>
+      <h3>Size Table</h3>
+      <table>
+        
         <thead>
           <tr>
             <th>Size</th>
@@ -27,6 +29,7 @@ const SizeChartTable = () => {
             <td>17 -20</td>
           </tr>
         </tbody>
+      </table>
       </div>
     );
   }
