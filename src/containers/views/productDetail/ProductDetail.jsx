@@ -73,16 +73,16 @@ const ProductDetail = () => {
           </div>
           <div className={styles.detailAction}>
             <span className={styles.btnSizeTable}>
-              <NoosaButton type="product">Size Table</NoosaButton>
-              <NoosaButton type="productSmall">Qty:1</NoosaButton>
+              <NoosaButton  width="133px" height="40px" borderRadius="10px">Size Table</NoosaButton>
+              <NoosaButton  width="84px" height="34px" borderRadius="10px">Qty:1</NoosaButton>
             </span>
             <span className={styles.detailActionSize}>
               <div className={styles.ProductDetailBtnDiv}>
                 <span className={styles.btnProductDetail}>
-                  <NoosaButton type="simple">Add to chart</NoosaButton>
+                  <NoosaButton width="232px" height="40px" borderRadius="10px">Add to chart</NoosaButton>
                 </span>
                 <span>
-                  <NoosaButton type="simple">Buy Now</NoosaButton>
+                  <NoosaButton width="232px" height="40px" borderRadius="10px">Buy Now</NoosaButton>
                 </span>
               </div>
               <div>

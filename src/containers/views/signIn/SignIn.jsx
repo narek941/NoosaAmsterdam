@@ -1,12 +1,34 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState } from 'react';
 import styles from './SignIn.module.css';
 import { TypeLinks, NoosaButton } from '../../../components/buttons';
 import Tick from '../../../img/Tick';
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/database';
+import 'firebase/messaging';
+import 'firebase/storage';
+
+
 const SignIn = (...props) => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [rememberpassword, setRememberPassword] = useState(false);
+
+
+
+  useEffect(() => {
+    // const s = Api.getLimitItems(6);
+    // s.then(function (value) {
+    //   setProducts(value);});
+    const db =firebase.database();
+    console.log(db)
+
+  }, []);
+
+
+
+
 
   function validateForm() {
     return email.length > 0 && password.length > 0;
@@ -14,21 +36,10 @@ const SignIn = (...props) => {
 
   function handleSubmit(event) {
     event.preventDefault();
-    //   let data = { formInput };
-
-    //   fetch("https://pointy-gauge.glitch.me/api/form", {
-    //     method: "POST",
-    //     body: JSON.stringify(data),
-    //     headers: {
-    //       "Content-Type": "application/json"
-    //     }
-    //   })
-    //     .then(response => response.json())
-    //     .then(response => console.log("Success:", JSON.stringify(response)))
-    //     .catch(error => console.error("Error:", error));
-    // };
-    console.log("submit")
+    firebase.auth().signInWithEmailAndPassword(email, password)
+    .catch(error => console.log(error));
   }
+
 
   return (
     <div className={styles.mainStyle}>
@@ -70,7 +81,7 @@ const SignIn = (...props) => {
               <label className={styles.rememberMe}>Remember me</label>
             </div>
             <TypeLinks type="navigationBig" to="signUp">Forgot your password?</TypeLinks>
-            <NoosaButton type="submit" disabled={!validateForm()}>Sign In</NoosaButton>
+            <NoosaButton type="submit" disabled={!validateForm()} width="430px" height="48px" borderRadius="10px">Sign In</NoosaButton>
           </form>
         </div>
         </div>

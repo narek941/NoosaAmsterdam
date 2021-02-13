@@ -21,7 +21,7 @@ const ProductCard = (products) => {
           </div>
           <div className={styles.cardAction}>
             <span onClick ={()=>dispatch(addProductInBasket(item.id))} className={styles.iconBasket}><IconButton type="basketOrange" /></span>
-            <span className={styles.smallBtn}><NoosaButton  type="product">Shop Now</NoosaButton></span>
+            <span className={styles.smallBtn}><NoosaButton width="80px" height="24px" borderRadius="4px">Shop Now</NoosaButton></span>
           </div>
         </div>
       </div>

@@ -1,5 +1,4 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
 import { HeaderLogo, TypeLinks } from "../../buttons";
 import styles from "./Footer.module.css";
 import IconButton from "../../../img/IconButton";
@@ -24,7 +23,7 @@ const Footer = ({ children, ...props }) => {
           <label className={styles.footerLabel}>
             <div>
               <ul className={styles.ulStyle}>
-                <span class={styles.footerHeader}>Information</span>
+                <span className={styles.footerHeader}>Information</span>
                 <li className={styles.liStyle}>
                   <TypeLinks type="navigation" to="/home">
                     Home
@@ -62,7 +61,7 @@ const Footer = ({ children, ...props }) => {
           <label className={styles.footerLabel}>
             <div>
               <ul className={styles.ulStyle}>
-                <span class={styles.footerHeader}>Products</span>
+                <span className={styles.footerHeader}>Products</span>
                 <li className={styles.liStyle}>
                   <TypeLinks type="navigation" to="/product">
                     Bracelets
@@ -99,7 +98,7 @@ const Footer = ({ children, ...props }) => {
           <label className={styles.footerLabel}>
             <div>
               <ul className={styles.ulStyle}>
-                <span class={styles.footerHeader}>Contacts</span>
+                <span className={styles.footerHeader}>Contacts</span>
                 <li className={styles.liStyle}>
                   <TypeLinks>                  Phone Number
 319-481-1070</TypeLinks>

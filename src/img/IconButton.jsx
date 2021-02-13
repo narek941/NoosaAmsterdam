@@ -8,7 +8,6 @@ const iconStyle = {
   opacity: 1,
   textTransform: "capitalize",
   margin: "15px",
-  // right: '200px',
 };
 
 const IconButton = (props) => {

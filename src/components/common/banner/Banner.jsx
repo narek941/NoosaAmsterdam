@@ -11,7 +11,7 @@ const Banner = (props) => {
             Tell your story with the unique Noosa Amsterdam collection
               </div>
               <div className={styles.button}>
-                  <NoosaButton >Shop Now</NoosaButton>
+                  <NoosaButton width="160px" height="56px" borderRadius="0px">Shop Now</NoosaButton>
               </div>
       </div>
       </section>

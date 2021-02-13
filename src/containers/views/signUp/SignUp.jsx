@@ -1,14 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './SignUp.module.css';
 import { TypeLinks, NoosaButton } from '../../../components/buttons';
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/database';
+import 'firebase/messaging';
+import 'firebase/storage';
 
 const SignUp = (...props) => {
+
+  useEffect(() => {
+    // const s = Api.getLimitItems(6);
+    // s.then(function (value) {
+    //   setProducts(value);});
+    const db =firebase.database();
+    console.log(db)
+
+  }, []);
+
+  
 
 
   function handleSubmit(event) {
     event.preventDefault();
     console.log("submit")
+    firebase.auth().createUserWithEmailAndPassword(email,password)
+    .catch(error => console.log(error));
   }
+
+
+
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -39,7 +60,7 @@ const SignUp = (...props) => {
               className={styles.signUpInput}
               value={password}
               onChange={(e) => setPassword(e.target.value)} />
-            <input
+            {/* <input
               placeholder="Name"
               className={styles.signUpInput}
               autoFocus
@@ -89,13 +110,14 @@ const SignUp = (...props) => {
                 type="text"
                 value={city}
                 onChange={(e) => setCity(e.target.value)} />
-            </div>
-            <NoosaButton type="register">Register now</NoosaButton>
+            </div> */}
+            <NoosaButton type="submit" width="200px" height="42px" borderRadius="10px">Register now</NoosaButton>
           </form>
         </div>
       </div>
     </div>
   )
+
 
 }
 

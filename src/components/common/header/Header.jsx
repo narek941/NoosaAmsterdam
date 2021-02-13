@@ -4,7 +4,7 @@ import styles from "./Header.module.css";
 import IconButton from "../../../img/IconButton";
 import SignPopup from "../popup/SignPop";
 import BacketPopup from "../popup/BacketPop";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import SearchProduct from "../searchProduct";
 
 const Header = ({ children, ...props }) => {
@@ -27,7 +27,7 @@ const Header = ({ children, ...props }) => {
           </TypeLinks>
           <TypeLinks>sale</TypeLinks>
           <label className={styles.searchLine}>
-            <SearchProduct />
+             <SearchProduct /> 
             <IconButton type="search" />
             <label
               className={styles.basketLabel}
@@ -46,7 +46,7 @@ const Header = ({ children, ...props }) => {
               {showSignPopup ? <SignPopup /> : null}
             </label>
           </label>
-
+          {console.log(showBacketPopup)}
           {children}
         </section>
       </div>

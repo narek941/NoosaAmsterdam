@@ -15,7 +15,7 @@ const Form = () => (
       <input type="text" placeholder="Your name" className="form-label" />
     </div>
     <textarea  placeholder="Message..." className="form-textarea" />
-    <NoosaButton className="form-submit">
+    <NoosaButton type="register" width="200px" height="51px" borderRadius="10px">
       Send
     </NoosaButton>
   </form>

@@ -90,7 +90,7 @@ const Product = () => {
                   type="checkbox"
                   checked={true}
                 /></ul>
-                <ul> <label for="cowbell">Price</label></ul>
+                <ul> <label>Price</label></ul>
                  <ul>
                     <input 
                     type="range"

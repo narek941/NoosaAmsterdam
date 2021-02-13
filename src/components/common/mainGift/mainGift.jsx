@@ -10,7 +10,7 @@ const MainGift = (props) => {
               Buy a gift card for any price and you are free, from further choice of gifts.
               </div>
               <div className={styles.button}>
-                  <NoosaButton >Buy Now</NoosaButton>
+                  <NoosaButton  width="160px" height="56px" borderRadius="4px">Buy Now</NoosaButton>
               </div>
           
       </div>

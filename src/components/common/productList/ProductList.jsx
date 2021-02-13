@@ -4,6 +4,11 @@ import axios from "axios";
 import Grid from "@material-ui/core/Grid";
 import styles from "./ProductList.module.css";
 import * as Api from "../../../services/api";
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/database';
+import 'firebase/messaging';
+import 'firebase/storage';
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -11,8 +16,8 @@ const ProductList = () => {
   useEffect(() => {
     const s = Api.getLimitItems(6);
     s.then(function (value) {
-      setProducts(value);
-    });
+      setProducts(value);});
+    
   }, []);
 
   return (

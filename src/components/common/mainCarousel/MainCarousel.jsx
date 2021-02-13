@@ -44,7 +44,7 @@ function Item(props) {
         <div className={styles.slider_itemContent}>
           <div className={styles.slider_title}>{props.item.name}</div>
           <div className={styles.slider_text}>{props.item.description}</div>
-          <NoosaButton>Shop Now</NoosaButton>
+          <NoosaButton width="160px" height="56px" borderRadius="0px" >Shop Now</NoosaButton>
         </div>
       </section>
     </div>

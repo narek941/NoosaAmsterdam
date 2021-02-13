@@ -31,7 +31,7 @@ const ProductCard = (products) => {
               <IconButton type="basketOrange" />
             </span>
             <span className={styles.btn}>
-              <NoosaButton type="product">Shop Now</NoosaButton>
+              <NoosaButton width="112px" height="36px" borderRadius="4px" >Shop Now</NoosaButton>
             </span>
           </div>
         </div>
