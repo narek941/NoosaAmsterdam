@@ -1,14 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { ProductCard } from "../productCard";
-import axios from "axios";
-import Grid from "@material-ui/core/Grid";
 import styles from "./ProductList.module.css";
-import * as Api from "../../../services/api";
-import firebase from 'firebase/app';
-import 'firebase/auth';
-import 'firebase/database';
-import 'firebase/messaging';
-import 'firebase/storage';
 
 const ProductList = (props) => {
   console.log(props.item)
