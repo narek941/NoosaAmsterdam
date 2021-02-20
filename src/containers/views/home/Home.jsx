@@ -1,13 +1,39 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Carousel from "react-material-ui-carousel";
 import { MainCarousel, MainGift, ProductList } from "../../../components";
+import { setBestProductItems, setCarouselItems } from "../../../redux/reducers/homeReducer";
+import { compose } from "redux";
+import { connect } from "react-redux";
+const Home = (props) => {
 
-const Home = () => {
+
+  useEffect(() => {
+    props.setCarouselItems();
+    props.setBestProductItems();
+  }, []);
+
+
   return (
     <>
-      <MainCarousel />
-      <ProductList />
+      <Carousel navButtonsAlwaysVisible="true">
+        {props.carousel &&
+          props.carousel.map((item, i) => (
+
+            <MainCarousel key={i} item={item} />
+
+          ))}
+      </Carousel>
+      <ProductList item={props.bestProduct} />
       <MainGift />
     </>
   );
 };
-export default Home;
+let mapStateToProps = (state) => {
+  return {
+    carousel: state.Home.carousel,
+    bestProduct: state.Home.bestProduct,
+  }
+}
+export default compose(
+  connect(mapStateToProps, { setCarouselItems, setBestProductItems })
+)(Home)

@@ -10,26 +10,22 @@ import 'firebase/database';
 import 'firebase/messaging';
 import 'firebase/storage';
 
-const ProductList = () => {
-  const [products, setProducts] = useState([]);
+const ProductList = (props) => {
+  console.log(props.item)
 
-  useEffect(() => {
-    const s = Api.getLimitItems(6);
-    s.then(function (value) {
-      setProducts(value);});
-    
-  }, []);
 
   return (
+    !props.item ?
+     <></> :
     <section>
       <div className={styles.productList}>
         <div className={styles.productTitle}>Best Offers</div>
         <div>
           <label className={styles.productLabel}>
-            <ProductCard products={products.slice(0, 3)} />
+            <ProductCard products={props.item.slice(0, 3)} />
           </label>
            <label className={styles.productLabel}>
-            <ProductCard products={products.slice(3, 6)} />
+            <ProductCard products={props.item.slice(3, 6)} />
           </label> 
         </div>
       </div>

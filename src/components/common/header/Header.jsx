@@ -27,7 +27,7 @@ const Header = ({ children, ...props }) => {
           </TypeLinks>
           <TypeLinks>sale</TypeLinks>
           <label className={styles.searchLine}>
-             <SearchProduct /> 
+             {/* <SearchProduct />  */}
             <IconButton type="search" />
             <label
               className={styles.basketLabel}
