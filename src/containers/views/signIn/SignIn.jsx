@@ -2,11 +2,7 @@ import React, {useEffect, useState } from 'react';
 import styles from './SignIn.module.css';
 import { TypeLinks, NoosaButton } from '../../../components/buttons';
 import Tick from '../../../img/Tick';
-import firebase from 'firebase/app';
-import 'firebase/auth';
-import 'firebase/database';
-import 'firebase/messaging';
-import 'firebase/storage';
+import {signInWithGoogle}  from '../../../firebase/utils'
 
 
 const SignIn = (...props) => {
@@ -15,29 +11,14 @@ const SignIn = (...props) => {
   const [password, setPassword] = useState("");
   const [rememberpassword, setRememberPassword] = useState(false);
 
-
-
-  useEffect(() => {
-    // const s = Api.getLimitItems(6);
-    // s.then(function (value) {
-    //   setProducts(value);});
-    const db =firebase.database();
-    console.log(db)
-
-  }, []);
-
-
-
-
-
   function validateForm() {
     return email.length > 0 && password.length > 0;
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    firebase.auth().signInWithEmailAndPassword(email, password)
-    .catch(error => console.log(error));
+   async function handleSubmit (event) {
+     event.preventDefault();
+    // firebase.auth().signInWithEmailAndPassword(email, password)
+    // .catch(error => console.log(error));
   }
 
 
@@ -49,7 +30,7 @@ const SignIn = (...props) => {
             <h1>Sign In</h1>
             <TypeLinks type="navigationBig" to="signUp">New Customer</TypeLinks>
           </div>
-          <form className={styles.form} onSubmit={handleSubmit}>
+          <form className={styles.form} onSubmit={signInWithGoogle}>
             <input
               placeholder="Email"
               className={styles.loginInput}
@@ -81,6 +62,10 @@ const SignIn = (...props) => {
               <label className={styles.rememberMe}>Remember me</label>
             </div>
             <TypeLinks type="navigationBig" to="signUp">Forgot your password?</TypeLinks>
+            <span onClick={signInWithGoogle}>
+              <NoosaButton>Sign In With Google</NoosaButton>
+            </span>
+          
             <NoosaButton type="submit" disabled={!validateForm()} width="430px" height="48px" borderRadius="10px">Sign In</NoosaButton>
           </form>
         </div>

@@ -4,7 +4,13 @@ import { MainCarousel, MainGift, ProductList } from "../../../components";
 import { setBestProductItems, setCarouselItems } from "../../../redux/reducers/homeReducer";
 import { compose } from "redux";
 import { connect } from "react-redux";
+
+
 const Home = (props) => {
+ 
+
+
+
 
 
   useEffect(() => {

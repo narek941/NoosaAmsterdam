@@ -1,31 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import styles from './SignUp.module.css';
 import { TypeLinks, NoosaButton } from '../../../components/buttons';
-import firebase from 'firebase/app';
-import 'firebase/auth';
-import 'firebase/database';
-import 'firebase/messaging';
-import 'firebase/storage';
+
 
 const SignUp = (...props) => {
 
-  useEffect(() => {
-    // const s = Api.getLimitItems(6);
-    // s.then(function (value) {
-    //   setProducts(value);});
-    const db =firebase.database();
-    console.log(db)
+  // useEffect(() => {
+  //   // const s = Api.getLimitItems(6);
+  //   // // s.then(function (value) {
+  //   // //   setProducts(value);});
+  //   // const db =firebase.database();
+  //   // console.log(db)
 
-  }, []);
+  // }, []);
 
   
 
 
   function handleSubmit(event) {
-    event.preventDefault();
-    console.log("submit")
-    firebase.auth().createUserWithEmailAndPassword(email,password)
-    .catch(error => console.log(error));
+    // event.preventDefault();
+    // console.log("submit")
+    // firebase.auth().createUserWithEmailAndPassword(email,password)
+    // .catch(error => console.log(error));
   }
 
 
