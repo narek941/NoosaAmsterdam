@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/NoosaAmsterdam/static/css/main.61d85bf3.chunk.css",
-    "main.js": "/NoosaAmsterdam/static/js/main.3c8632a6.chunk.js",
-    "main.js.map": "/NoosaAmsterdam/static/js/main.3c8632a6.chunk.js.map",
+    "main.js": "/NoosaAmsterdam/static/js/main.31c8a97a.chunk.js",
+    "main.js.map": "/NoosaAmsterdam/static/js/main.31c8a97a.chunk.js.map",
     "runtime-main.js": "/NoosaAmsterdam/static/js/runtime-main.c7f6394c.js",
     "runtime-main.js.map": "/NoosaAmsterdam/static/js/runtime-main.c7f6394c.js.map",
     "static/js/2.edc70f05.chunk.js": "/NoosaAmsterdam/static/js/2.edc70f05.chunk.js",
@@ -25,6 +25,6 @@
     "static/js/runtime-main.c7f6394c.js",
     "static/js/2.edc70f05.chunk.js",
     "static/css/main.61d85bf3.chunk.css",
-    "static/js/main.3c8632a6.chunk.js"
+    "static/js/main.31c8a97a.chunk.js"
   ]
 }
