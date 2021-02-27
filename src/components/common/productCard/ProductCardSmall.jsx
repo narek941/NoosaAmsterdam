@@ -2,14 +2,9 @@ import React from "react";
 import NoosaButton from "../../buttons/NoosaButton";
 import IconButton from "../../../img/IconButton";
 import styles from "./ProductCard.module.css";
-import {useSelector,useDispatch} from 'react-redux';
-import {addProductInBasket,minusProductInBasket} from "../../../redux/actions/backetActions";
 import Like from '../../../img/Like';
 
 const ProductCard = (products) => {
-  const productInBasket = useSelector(state => state.Backet.productInBasket);
-  const dispatch = useDispatch();
-
   return products.products.map((item,index) => (
     <div className={styles.smallCardContainer} key={index}>
       <div>
@@ -20,8 +15,10 @@ const ProductCard = (products) => {
             <span className={styles.smallCardPrice}>{item.price}$</span>
           </div>
           <div className={styles.cardAction}>
-            <span onClick ={()=>dispatch(addProductInBasket(item.id))} className={styles.iconBasket}><IconButton type="basketOrange" /></span>
-            <span className={styles.smallBtn}><NoosaButton width="80px" height="24px" borderRadius="4px">Shop Now</NoosaButton></span>
+            <span
+            //  onClick ={()=>dispatch(addProductInBasket(item.id))} 
+            className={styles.iconBasket}><IconButton type="basketOrange" /></span>
+            <span className={styles.smallBtn}><NoosaButton width="80px" height="24px" borderRadius="4px" fontSize="10px">Shop Now</NoosaButton></span>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import ProductList from './ProductList';
+import ProductListContainer from './ProductListContainer';
 
-export default  ProductList;
+export default  ProductListContainer;
 

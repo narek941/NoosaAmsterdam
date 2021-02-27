@@ -1,5 +1,5 @@
 import { Home, About, Product, Contact, MainLayout, SignIn, SignUp,ProductDetail,Order } from "../containers";
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import React from 'react';
 
 const MainRouter = () => {

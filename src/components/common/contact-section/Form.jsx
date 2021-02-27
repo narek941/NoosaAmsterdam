@@ -1,8 +1,6 @@
 import React from 'react'
-import NoosaButton from '../buttons/NoosaButton'
+import NoosaButton from '../../buttons/NoosaButton'
 import './Form.css'
-import TextField from '@material-ui/core/TextField';
-import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 
 
 const formInputs = []

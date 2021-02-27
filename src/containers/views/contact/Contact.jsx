@@ -1,6 +1,6 @@
 import React from 'react';
-import {Map} from "../../items";
-import ContactSection from '../../../components/contact-section/ContactSection'
+import {Map} from "../../../components";
+import {ContactSection} from '../../../components'
 
 const Contact = () => {
   const location = {

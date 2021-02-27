@@ -10,7 +10,6 @@ import SearchProduct from "../searchProduct";
 const Header = ({ children, ...props }) => {
   const [showSignPopup, setShowSignPopup] = useState(false);
   const [showBacketPopup, setShowBacketPopup] = useState(false);
-  const productInBasket = useSelector((state) => state.Backet.productInBasket);
   return (
     <>
       <div className={styles.header} position="static">
@@ -35,7 +34,7 @@ const Header = ({ children, ...props }) => {
             >
               <IconButton type="basket" className={styles.basket} />
               <span className={styles.basketCount}>
-                {productInBasket.length}
+                {/* {productInBasket.length} */}
               </span>
               {showBacketPopup ? <BacketPopup /> : null}
             </label>

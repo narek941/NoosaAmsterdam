@@ -1,6 +1,5 @@
   
 import React from 'react'
-
 import Form from './Form'
 import Info from './Info'
 import './ContactSection.css'
@@ -13,4 +12,4 @@ const ContactSection = () => (
     </div>
   </>
 )
-export default ContactSection
+export default ContactSection;

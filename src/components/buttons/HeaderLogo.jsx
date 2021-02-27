@@ -10,7 +10,7 @@ const HeaderLogo = ({ type, to, children, ...props }) => {
     backgroundImage: `url(${noosaLogo})`,
     width: '165px',
     height: '57px',
-    paddingRight: '305px'
+    marginRight: '305px'
   };
   const mystyle = {
     background: 'transparent 0% 0% no-repeat padding-box',

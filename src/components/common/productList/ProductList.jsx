@@ -3,12 +3,8 @@ import { ProductCard } from "../productCard";
 import styles from "./ProductList.module.css";
 
 const ProductList = (props) => {
-  console.log(props.item)
-
 
   return (
-    !props.item ?
-     <></> :
     <section>
       <div className={styles.productList}>
         <div className={styles.productTitle}>Best Offers</div>

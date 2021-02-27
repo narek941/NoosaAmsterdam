@@ -3,16 +3,9 @@ import NoosaButton from "../../buttons/NoosaButton";
 import IconButton from "../../../img/IconButton";
 import styles from "./ProductCard.module.css";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  addProductInBasket,
-  minusProductInBasket,
-} from "../../../redux/actions/backetActions";
 import Like from "../../../img/Like";
-import { NavLink as RouterNavLink } from "react-router-dom";
 
 const ProductCard = (products) => {
-  const productInBasket = useSelector((state) => state.Backet.productInBasket);
-  const dispatch = useDispatch();
 
   return products.products.map((item, index) => (
     <div className={styles.cardContainer} key={index}>
@@ -26,7 +19,6 @@ const ProductCard = (products) => {
           </div>
           <div className={styles.cardAction}>
             <span
-              onClick={() => dispatch(addProductInBasket(item.id))}
               className={styles.iconBasket} >
               <IconButton type="basketOrange" />
             </span>
