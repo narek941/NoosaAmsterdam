@@ -1,6 +1,6 @@
 import Header from './header';
 import MainCarouselContainer from './mainCarousel';
-import ProductList from './productList';
+import ProductListContainer from './productList';
 import Footer from './footer';
 import MainGift from './mainGift';
 import SignPop from './popup/SignPop';
@@ -14,7 +14,7 @@ import Map from "./map";
 export{
   Header,
   MainCarouselContainer,
-  ProductList,
+  ProductListContainer,
   Footer,
   MainGift,
   SignPop,

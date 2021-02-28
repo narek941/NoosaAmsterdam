@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Carousel from "react-material-ui-carousel";
-import { MainCarousel, MainGift, ProductList } from "../../../components";
+import { MainCarousel, MainGift, ProductListContainer } from "../../../components";
 import { dataAPI } from '../../../api';
 
 
@@ -14,11 +14,11 @@ const Home = (props) => {
         {props.carousel &&
           props.carousel.map((item, i) => (
 
-            <MainCarouselContainer key={i} item={item} />
+            <MainCarouselContainer key={i} />
 
           ))}
       </Carousel>
-      <ProductList item={props.bestProduct} /> */}
+      <ProductListContainer/> */}
       <MainGift />
     </>
   );
