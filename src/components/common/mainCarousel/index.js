@@ -1,3 +1,3 @@
-import MainCarousel from './MainCarousel';
+import MainCarouselContainer from './MainCarouselContainer';
 
-export default MainCarousel;
+export default MainCarouselContainer;

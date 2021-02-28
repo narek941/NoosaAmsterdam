@@ -1,7 +1,5 @@
 import {combineReducers } from 'redux';
-
+import carouselReducer from '../reducers/carouselReducer'
 export default combineReducers({
-    // Backet: backetReducer,
-    // Product: productReducer,
-    // Home: homeReducer,
+    carouselItems:carouselReducer,
 })

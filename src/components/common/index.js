@@ -1,5 +1,5 @@
 import Header from './header';
-import MainCarousel from './mainCarousel';
+import MainCarouselContainer from './mainCarousel';
 import ProductList from './productList';
 import Footer from './footer';
 import MainGift from './mainGift';
@@ -13,7 +13,7 @@ import Map from "./map";
 
 export{
   Header,
-  MainCarousel,
+  MainCarouselContainer,
   ProductList,
   Footer,
   MainGift,
