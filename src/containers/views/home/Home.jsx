@@ -1,24 +1,13 @@
-import React, { useEffect } from "react";
-import Carousel from "react-material-ui-carousel";
-import { MainCarousel, MainGift, ProductListContainer } from "../../../components";
-import { dataAPI } from '../../../api';
+import React from "react";
+import { MainCarouselContainer, MainGift, ProductListContainer } from "../../../components";
 
 
 const Home = (props) => {
 
-
-  
   return (
     <>
-      {/* <Carousel navButtonsAlwaysVisible="true">
-        {props.carousel &&
-          props.carousel.map((item, i) => (
-
-            <MainCarouselContainer key={i} />
-
-          ))}
-      </Carousel>
-      <ProductListContainer/> */}
+            <MainCarouselContainer />
+      {/* <ProductListContainer/> */}
       <MainGift />
     </>
   );
