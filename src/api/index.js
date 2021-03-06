@@ -1,30 +1,67 @@
-import * as axios from "axios";
-
-const instance = axios.create({
-    baseURL: 'https://noosa-amsterdam-aa87b-default-rtdb.europe-west1.firebasedatabase.app/',
- 
-});
-
+import {db} from "../firebase/utils";
 
 export const dataAPI = {
 
+
+
     async getCarouselApi() {
-         let carusel = await instance.get(`carousel.json`);
-        return carusel;
+        const caruselRef = db.collection("carousel");
+        const carousel = await caruselRef
+            .get()
+            .then(snapshot => {
+                const carousels = snapshot.docs.map(doc=>({
+                    id: doc.id,
+                   ...doc.data()
+                }));
+                console.log(carousels);
+                return carousels;
+        })
+            .catch((error) => {
+                console.log("Error getting documents: ", error);
+            });
     },
 
 
     async getAllProductsApi() {
-        let response = await instance.get(`product.json`);
-        return response;
+        const allProductRef = db.collection("products");
+        const product = await allProductRef
+            .orderBy('id')
+            .limit(9)
+            .get()
+            .then(snapshot => {
+                const products = snapshot.docs.map(doc=>({
+                    id: doc.id,
+                    ...doc.data()
+                }));
+                console.log(products);
+                return products;
+            })
+            .catch((error) => {
+                console.log("Error getting documents: ", error);
+            });
+    },
+
+    async getByIdProductsApi(id) {
+        const byIdProductRef = db.collection("products");
+        const product = await byIdProductRef.
+        where('id','==', id)
+            .get()
+            .then(snapshot => {
+                const products = snapshot.docs.map(doc=>({
+                    id: doc.id,
+                    ...doc.data()
+                }));
+                console.log(products);
+                return products;
+            })
+            .catch((error) => {
+                console.log("Error getting documents: ", error);
+            });
     }
-    
- 
+
 }
 
 
 export const authAPI = {
-    // me() {
-    //     return instance.get(`auth/me`)
-    // }
+
 }
