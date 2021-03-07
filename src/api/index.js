@@ -5,16 +5,15 @@ export const dataAPI = {
 
 
     async getCarouselApi() {
-        const caruselRef = db.collection("carousel");
-        const carousel = await caruselRef
+        return await db.collection("carousel")
             .get()
             .then(snapshot => {
-                const carousels = snapshot.docs.map(doc=>({
+                const items = snapshot.docs.map(doc=>({
                     id: doc.id,
                    ...doc.data()
                 }));
-                console.log(carousels);
-                return carousels;
+                console.log(items);
+                return items;
         })
             .catch((error) => {
                 console.log("Error getting documents: ", error);
@@ -22,19 +21,18 @@ export const dataAPI = {
     },
 
 
-    async getAllProductsApi() {
-        const allProductRef = db.collection("products");
-        const product = await allProductRef
+    async getAllProductsApi(limit=9) {
+        return await db.collection("products")
             .orderBy('id')
-            .limit(9)
+            .limit(limit)
             .get()
             .then(snapshot => {
-                const products = snapshot.docs.map(doc=>({
+                const items = snapshot.docs.map(doc=>({
                     id: doc.id,
                     ...doc.data()
                 }));
-                console.log(products);
-                return products;
+                console.log(items);
+                return items;
             })
             .catch((error) => {
                 console.log("Error getting documents: ", error);
@@ -42,17 +40,16 @@ export const dataAPI = {
     },
 
     async getByIdProductsApi(id) {
-        const byIdProductRef = db.collection("products");
-        const product = await byIdProductRef.
-        where('id','==', id)
+        return await db.collection("products")
+            .where('id','==', id)
             .get()
             .then(snapshot => {
-                const products = snapshot.docs.map(doc=>({
+                const items = snapshot.docs.map(doc=>({
                     id: doc.id,
                     ...doc.data()
                 }));
-                console.log(products);
-                return products;
+                console.log(items);
+                return items;
             })
             .catch((error) => {
                 console.log("Error getting documents: ", error);

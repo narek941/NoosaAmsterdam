@@ -1,18 +1,15 @@
 import store from "../store";
+import {dataAPI} from "../../api";
 const GET_CAROUSEL_ITEMS ="GET_CAROUSEL_ITEMS"
 
 const INITIAL_STATE = {
-    carousel: [{
-        description: "Noosa Amsterdam Accessories that you create yourself",
-        img : "https://i.ibb.co/F404sNP/118401854-129943792130911-7384229098764077942-o-2x.png",
-        name: "New Collection"
-    }]
+    carousel:[]
 };
 
 ///reducer
 const CarouselReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
-        case "GET_CAROUSEL_ITEMS":
+        case GET_CAROUSEL_ITEMS:
             return {
                 carousel: action.payload
             }
@@ -23,20 +20,21 @@ const CarouselReducer = (state = INITIAL_STATE, action) => {
 
 ///reducer
 
-///actions
-
-///actions
 //////actions creator
-export const actionSetCarouselToRedux=(payload)=>{
-    return{
-        type: GET_CAROUSEL_ITEMS,
-        payload,
+export const actionSetCarouselToRedux=(payload)=>({type: GET_CAROUSEL_ITEMS,payload})
+
+
+//////actions creator
+
+export const getCarouselThunk = dispatch => {
+        console.log('loading')
+        dataAPI.getCarouselApi()
+        .then(data => {
+            console.log(data);
+            store.dispatch(actionSetCarouselToRedux(data))
+        });
+        console.log('loading is fin' )
     }
-}
-
-//////actions creator
-
-//store.dispatch(actionSetCarouselToRedux);
 
 
 export default CarouselReducer;

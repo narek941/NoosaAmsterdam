@@ -7,8 +7,8 @@ const Home = (props) => {
   return (
     <>
             <MainCarouselContainer />
-      {/* <ProductListContainer/> */}
-      <MainGift />
+            <ProductListContainer />
+            <MainGift />
     </>
   );
 };
