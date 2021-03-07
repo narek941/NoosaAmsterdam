@@ -1,0 +1,14 @@
+.filterTitle{
+    font-size: 24px;
+}
+.filterContainer{
+    width: 218px;
+    margin-right: 133px;
+}
+.filterCheck{
+    display: grid;
+    text-align: left;
+}
+.filterCheck input{
+    float: right;
+}

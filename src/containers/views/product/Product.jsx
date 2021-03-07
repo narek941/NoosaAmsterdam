@@ -5,6 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import { Pagination } from "@material-ui/lab";
 import styles from "./Product.module.css";
 import * as Api from "../../../services/api";
+import Filter from "../../../components/common/filter";
 
 const Product = () => {
   const [products, setProducts] = useState([]);
@@ -29,7 +30,7 @@ const Product = () => {
   }, []);
 
   useEffect(() => {
-    let pages = Math.ceil(totalCount / 9);
+    let pages = Math.ceil(totalCount /12);
     setPageCount(pages);
     console.log(products);
   }, [products, totalCount]);
@@ -38,73 +39,7 @@ const Product = () => {
     <>
       <Banner />
       <section className={styles.productSection}>
-        <div className={styles.filterContainer}>
-          <div className={styles.filterTitle}>Home / Products</div>
-          <div className={styles.filterInputs}>
-
-
-
-            <div className={styles.filterCheck}>
-              <ul> <label>Woman</label>
-                <input
-                  type="checkbox"
-                  checked={true}
-                /></ul>
-               <ul> <label>Men</label>
-                <input
-                  type="checkbox"
-                  checked={true}
-                /></ul>
-                <ul> <label>Braclets</label>
-                <input
-                  type="checkbox"
-                  checked={true}
-                /></ul>
-                <ul> <label>Buttons</label>
-                <input
-                  type="checkbox"
-                  checked={true}
-                /></ul>
-                <ul> <label>Belts</label>
-                <input
-                  type="checkbox"
-                  checked={true}
-                /></ul>
-                 <ul> <label>Bags</label>
-                <input
-                  type="checkbox"
-                  checked={true}
-                /></ul>
-                 <ul> <label>Wallets</label>
-                <input
-                  type="checkbox"
-                  checked={true}
-                /></ul>
-                 <ul> <label>Collections</label>
-                <input
-                  type="checkbox"
-                  checked={true}
-                /></ul>
-                 <ul> <label>Sale</label>
-                <input
-                  type="checkbox"
-                  checked={true}
-                /></ul>
-                <ul> <label>Price</label></ul>
-                 <ul>
-                    <input 
-                    type="range"
-                    min="0"
-                    max="100"
-                    value="90" 
-                    step="10"/>
-         
-                  </ul>
-            </div>
-
-
-          </div>
-        </div>
+        <Filter />
 
         <div className={styles.productList}>
           SORT BY
@@ -119,7 +54,7 @@ const Product = () => {
               <ProductCardSmall products={products.slice(4, 7)} />
             </Grid>
             <Grid container item xs={12} spacing={3}>
-              <ProductCardSmall products={products.slice(4, 7)} />
+              <ProductCardSmall products={products.slice(8, 11)} />
             </Grid>
           </Grid>
           <Pagination
@@ -129,7 +64,7 @@ const Product = () => {
             variant="outlined"
             shape="rounded"
             onChange={(ev, page) => {
-              setPageNumber(page);
+             setPageNumber(page);
             }}
           />
         </div>

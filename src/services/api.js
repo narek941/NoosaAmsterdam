@@ -31,7 +31,7 @@ const getLimitItems = async (limit) => {
 }
 const getProductWithPassedPageNumber = async (passedPageNumber) => {
 
-  const response = await axios.get(`/product?_limit=9`, {
+  const response = await axios.get(`/product?_limit=12`, {
     params: {
       _page: passedPageNumber ? passedPageNumber : 1,
     }

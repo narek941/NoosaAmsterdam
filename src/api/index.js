@@ -21,7 +21,7 @@ export const dataAPI = {
     },
 
 
-    async getAllProductsApi(limit=9) {
+    async getAllProductsApi(limit=12) {
         return await db.collection("products")
             .orderBy('id')
             .limit(limit)
