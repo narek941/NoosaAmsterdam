@@ -9,8 +9,12 @@ const MainCarouselContainer = (props) => {
     props.getCarouselThunk();
 
   },[])
+
   return (
-    <Carousel>
+      !props.carousel?
+          <>Loading</>
+          :
+     <Carousel>
       {props.carousel.map((item, i) => (
       <MainCarousel item={item} key ={i}/>
       ))}

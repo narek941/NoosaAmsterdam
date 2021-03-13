@@ -8,10 +8,10 @@ const ProductList = ({bestProduct}) => {
       <div className={styles.productList}>
         <div className={styles.productTitle}>Best Offers</div>
         <div>
-          <label className={styles.productLabel}>
+          <label >
             <ProductCard products={bestProduct.slice(0, 3)} />
           </label>
-           <label className={styles.productLabel}>
+           <label>
             <ProductCard products={bestProduct.slice(3, 6)} />
           </label>
         </div>

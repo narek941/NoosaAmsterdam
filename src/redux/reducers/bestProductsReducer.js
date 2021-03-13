@@ -1,9 +1,11 @@
 import store from "../store";
 import {dataAPI} from "../../api";
 const GET_BEST_PRODUCT_ITEMS ="GET_BEST_PRODUCT_ITEMS"
+const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING';
 
 const INITIAL_STATE = {
-    bestProduct:[]
+    bestProduct:[],
+    isFetching:true,
 };
 
 ///reducer
@@ -13,6 +15,9 @@ const BestProductsReducer = (state = INITIAL_STATE, action) => {
             return {
                 bestProduct: action.payload
             }
+            case TOGGLE_IS_FETCHING: {
+            return {...state, isFetching: action.isFetching}
+        }
         default:
             return state
     }
@@ -22,18 +27,19 @@ const BestProductsReducer = (state = INITIAL_STATE, action) => {
 
 //////actions creator
 export const actionSetBestProductToRedux=(payload)=>({type: GET_BEST_PRODUCT_ITEMS,payload})
-
+export const toggleIsFetching = (isFetching) => ({type: TOGGLE_IS_FETCHING, isFetching})
 
 //////actions creator
 
-export const getBestProductThunk = dispatch => {
-    console.log('loading')
-    dataAPI.getAllProductsApi(6)
+export const getBestProductThunk= async  dispatch => {
+    store.dispatch(toggleIsFetching(true));
+    await dataAPI.getAllProductsApi(6)
         .then(data => {
             console.log(data);
             store.dispatch(actionSetBestProductToRedux(data))
         });
-    console.log('loading is fin' )
+    store.dispatch(toggleIsFetching(false));
+
 }
 
 

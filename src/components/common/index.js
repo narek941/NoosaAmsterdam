@@ -11,6 +11,7 @@ import ContactSection from "./contact-section/ContactSection";
 import Map from "./map";
 
 
+
 export{
   Header,
   MainCarouselContainer,
@@ -22,5 +23,6 @@ export{
   BacketPop,
   SizeChartTable,
   ContactSection,
-  Map
+  Map,
+
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import { Button } from '@material-ui/core';
 import { NavLink as RouterNavLink } from 'react-router-dom';
 
-const NoosaButton = ({ to, children, type, fontSize ="16px",...props }) => {
+const NoosaButton = ({ to, children, type, fontSize ='16px',...props }) => {
 
     const noosaButton = {
         background: '#CF8957 0% 0% no-repeat padding-box',
@@ -11,7 +11,7 @@ const NoosaButton = ({ to, children, type, fontSize ="16px",...props }) => {
         color: '#F5F3F2',
         width: props.width,
         height: props.height,
-        fontSize: props.fontSize,
+        fontSize: fontSize,
     };
 
     switch (type) {

@@ -7,14 +7,22 @@ const ProductListContainer = (props) => {
   useEffect(()=>{
     props.getBestProductThunk();
   },[])
+  return(
 
-  return <ProductList bestProduct={props.bestProduct} />
- 
+        props.isFetching ?
+            <>Loading</>
+            :
+            <ProductList bestProduct={props.bestProduct}/>
+
+  )
+
+
 };
 
 const mapStateToProps = state => {
   return {
     bestProduct: state.bestProduct.bestProduct,
+    isFetching:state.bestProduct.isFetching,
   }
 }
 

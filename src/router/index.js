@@ -1,4 +1,4 @@
-import { Home, About, Product, Contact, MainLayout, SignIn, SignUp,ProductDetail,Order } from "../containers";
+import {Home, About, Product, Contact, MainLayout, SignIn, SignUp, Order, ProductDetail} from "../containers";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import React from 'react';
 
@@ -7,6 +7,10 @@ const MainRouter = () => {
     <Router>
       <MainLayout >
         <Switch>
+          <Route
+              path="/productDetail"
+              component={ProductDetail}
+          />
           <Route
             exact
             component={Home}
@@ -39,11 +43,7 @@ const MainRouter = () => {
             path="/signUp"
             component={SignUp}
           />
-          <Route
-            exact
-            path="/productDetail"
-            component={ProductDetail}
-          />
+
           <Route
             exact
             path="/order"
@@ -51,7 +51,7 @@ const MainRouter = () => {
           />
           <Route 
           exact path="/" 
-          component={ProductDetail}
+          component={Home}
           />
 
         </Switch>

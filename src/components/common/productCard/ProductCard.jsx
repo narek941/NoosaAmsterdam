@@ -4,14 +4,17 @@ import IconButton from "../../../img/IconButton";
 import styles from "./ProductCard.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import Like from "../../../img/Like";
+import {NavLink, NavLink as RouterNavLink} from "react-router-dom";
+import {Button} from "@material-ui/core";
 
 const ProductCard = (products) => {
 
   return products.products.map((item, index) => (
-    <div className={styles.cardContainer} key={index}>
+    <div className={styles.cardContainer} key={index}  >
       <div>
+        <NavLink to={'productDetail/id='+ item.id}>
         <img className={styles.card} src={item.img} alt="img" />
-
+        </NavLink>
         <div className={styles.cardInfoContent}>
           <div>
           <span className={styles.cardTitle}>{item.title}</span>  
