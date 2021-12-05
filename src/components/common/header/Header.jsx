@@ -14,7 +14,9 @@ const Header = ({ children, ...props }) => {
     <>
       <div className={styles.header} position="static">
         <section>
+          <div className={styles.header__container}>
           <HeaderLogo type="header" to={"/home"} />
+          <nav>
           <TypeLinks type="navigation" to="/product">
             product
           </TypeLinks>
@@ -45,8 +47,9 @@ const Header = ({ children, ...props }) => {
               {showSignPopup ? <SignPopup /> : null}
             </label>
           </label>
-          {console.log(showBacketPopup)}
           {children}
+          </nav>
+          </div>
         </section>
       </div>
     </>
