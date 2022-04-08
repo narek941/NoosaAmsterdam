@@ -1,10 +1,8 @@
-import React from 'react';
+import React from "react";
 import MainRouter from "./router";
-import './App.css';
+import "./App.css";
 
-const App = props => {
-    return (
-        <MainRouter />
-    )
-}
+const App = (props) => {
+  return <MainRouter />;
+};
 export default App;
