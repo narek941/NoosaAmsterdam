@@ -3,6 +3,13 @@ import { Button } from "@material-ui/core";
 import { NavLink as RouterNavLink } from "react-router-dom";
 
 const TypeLinks = ({ type, to, children, ...props }) => {
+  const mystyleDefault = {
+    textTransform: "capitalize",
+    color: "#F5F3F2",
+    justifyContent: "start",
+    padding: 0,
+  };
+
   const mystyle = {
     textTransform: "capitalize",
     color: "#F5F3F2",
@@ -28,6 +35,12 @@ const TypeLinks = ({ type, to, children, ...props }) => {
     case "navigationBig":
       return (
         <Button style={mystyleBig} component={RouterNavLink} to={to}>
+          {children}
+        </Button>
+      );
+    case "footer":
+      return (
+        <Button style={mystyleDefault} component={RouterNavLink} to={to}>
           {children}
         </Button>
       );
