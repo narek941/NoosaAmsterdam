@@ -1,0 +1,17 @@
+
+.productList{
+    padding: 80px 0px 80px 0px;
+
+    &_title {
+        text-align: left;
+        font-size:  36px;
+        letter-spacing: 0px;
+        color: #3D3D3B;
+        margin-bottom: 40px;
+    }
+    &_wrapper{
+        display: grid;
+        grid-template-columns: auto auto auto;
+         gap:32px;
+       }
+}

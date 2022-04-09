@@ -1,35 +1,34 @@
 import ProductList from "./ProductList";
-import React, {useEffect} from "react";
-import { connect } from 'react-redux'
-import { getBestProductThunk } from '../../../redux/reducers/bestProductsReducer';
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
+import { getBestProductThunk } from "../../../redux/reducers/bestProductsReducer";
 
 const ProductListContainer = (props) => {
-  useEffect(()=>{
+  useEffect(() => {
     props.getBestProductThunk();
-  },[])
-  return(
+  }, []);
 
-        props.isFetching ?
-            <>Loading</>
-            :
-            <ProductList bestProduct={props.bestProduct}/>
-
-  )
-
-
+  return props.isFetching ? (
+    <>Loading</>
+  ) : (
+    <ProductList bestProduct={props.bestProduct} />
+  );
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     bestProduct: state.bestProduct.bestProduct,
-    isFetching:state.bestProduct.isFetching,
-  }
-}
+    isFetching: state.bestProduct.isFetching,
+  };
+};
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
     getBestProductThunk,
-  }
-}
+  };
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProductListContainer);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ProductListContainer);

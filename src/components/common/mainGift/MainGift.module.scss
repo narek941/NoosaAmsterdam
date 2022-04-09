@@ -1,0 +1,40 @@
+.container {
+  background-image: url(../../../img/gift_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 453px;
+  position: relative;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    right: 0;
+    position:absolute;
+    transform: translateY(-50%);
+
+
+    &_text {
+      padding: 23px 50px 25px 35px;
+      max-width: 678px;
+      width: 100%;
+      background-color: #686261;
+      border-radius: 4px;
+      text-align: center;
+      font-family: Segoe UI;
+      letter-spacing: 0px;
+      line-height: 44px;
+      color: #f5f3f2;
+      font-size: 29px;
+      font-weight: 600;
+    }
+
+    &_button {
+      margin-top: 16px;
+      display: flex;
+      justify-content: start;
+
+    }
+  }
+}

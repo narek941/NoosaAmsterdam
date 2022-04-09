@@ -45,6 +45,7 @@ const Header = ({ children, ...props }) => {
               <div onClick={() => setShowSignPopup(!showSignPopup)}>
                 <IconButton type="user" />
               </div>
+            
             </div>
             {showSignPopup ? <SignPopup /> : null}
             {showBacketPopup ? <BacketPopup /> : null}

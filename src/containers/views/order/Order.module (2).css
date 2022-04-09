@@ -1,0 +1,11 @@
+.order_container{
+    padding-bottom: 120px;
+    padding-top: 80px;
+}
+.orderCard__basket{
+    width: 896px;
+    background-color: #686261;
+    min-height: 350px;
+    border-radius: 10px;
+    display: block
+}

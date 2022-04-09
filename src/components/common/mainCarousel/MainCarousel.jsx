@@ -16,6 +16,7 @@ const MainCarousel = ({ item }) => {
             Shop Now
           </NoosaButton>
         </div>
+       
       </section>
     </div>
   );

@@ -1,116 +1,122 @@
-.cardContainer{
-    background-color: #686261;
-    width: 432px;
-    min-height: 400px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 40px 0px 40px 32px;
-    text-align: center;
-    opacity: 1;
-    position: relative;
-    display: inline-block;
-    margin: 40px 7px;
-}
-.card{
+.card {
+  background-color: #686261;
+  width: 432px;
+  height: 548px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+
+  &__img {
     height: 445px;
     border-radius: 20px;
     width: 432px;
-    
-}
+  }
 
-.cardInfoContent{
-    margin: 5px;
-}
-.cardTitle{
-    float: left;
-    
-}
-.cardPrice{
-    float: right;
-    font-size: 36px;
-}
-.cardAction{
-    display: inline-flex;
-}
-.btn{
-    margin-left: 256px;
-    float: left;
-}
-.iconBasket{
-    background-color:#CF8957;
-    border-radius: 4px;
-    opacity: 1;
+  &__info {
+    padding: 0 16px 16px;
+    color: #f5f3f2;
+
+    &_text {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4px;
+      align-items: center;
+      &_title {
+        font-size: 16px;
+      }
+      &_price {
+        font-size: 36px;
+      }
+    }
+    &_actions {
+      display: flex;
+      justify-content: space-between;
+
+      &_basket {
+        background-color: #cf8957;
+        min-width: 36px;
+        height: 36px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+      }
+    }
+  }
+  &__like {
+    position: absolute;
+    top: 21px;
+    right: 21px;
+    background-color: #cf8957;
     width: 36px;
     height: 36px;
-    display:table;
-    float: right;
-
-}
-
-.smallCardContainer{
-    background-color: #686261;
-    width: 316px;
-    height: 400px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 0 auto;
-    text-align: center;
-    opacity: 1;
-    position: relative;
-    display: inline-block;
-    margin: 40px 7px;
-}
-.smallCard{
-    height: 323px;
-    border-radius: 20px;
-    width: 316px;
-    
-}
-
-.smallCardInfoContent{
-    margin: 5px;
-
-}
-.smallCardTitle{
-    float: left;
-
-}
-.smallCardPrice{
-    float: right;
-    font-size: 24px;
-}
-.smallCardAction{
-    position: absolute; 
+    border-radius: 4px;
     display: flex;
-    padding-left: 10px;
-    
-}
-.smallBtn{
-    margin-left: 150px;
-    text-align: center;
-}
-.SmallIcon{
-    background-color:#CF8957;
-    border-radius: 4px;
-    opacity: 1;
-    width: 24px;
-    height: 24px;
-    display:table;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
-.like{
-    top: 24px;
-    right: 24px;
-    position: absolute;
-    background-color: #CF8957;
-    width:40px;
-    height:40px;
-    border-radius: 4px;
+.smallCardContainer {
+  background-color: #686261;
+  width: 316px;
+  height: 400px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  text-align: center;
+  opacity: 1;
+  position: relative;
+  display: inline-block;
+  margin: 40px 7px;
 }
-.likeSmall{
-    top: 13px;
-    right: 13px;
-    position: absolute;
-    background-color: #CF8957;
-    border-radius: 4px;
+.smallCard {
+  height: 323px;
+  border-radius: 20px;
+  width: 316px;
+}
+
+.smallCardInfoContent {
+  margin: 5px;
+}
+.smallCardTitle {
+  float: left;
+}
+.smallCardPrice {
+  float: right;
+  font-size: 24px;
+}
+.smallCardAction {
+  position: absolute;
+  display: flex;
+  padding-left: 10px;
+}
+.smallBtn {
+  margin-left: 150px;
+  text-align: center;
+}
+.SmallIcon {
+  background-color: #cf8957;
+  border-radius: 4px;
+  opacity: 1;
+  width: 24px;
+  height: 24px;
+  display: table;
+}
+
+.like {
+  top: 24px;
+  right: 24px;
+  position: absolute;
+  background-color: #cf8957;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+.likeSmall {
+  top: 13px;
+  right: 13px;
+  position: absolute;
+  background-color: #cf8957;
+  border-radius: 4px;
 }

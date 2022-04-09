@@ -20,8 +20,8 @@ const IconButton = (props) => {
     case "basket":
       return (
         <svg
-          width="18px"
-          height="18px"
+          width="26px"
+          height="26px"
           viewBox="0 0 20 20"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
