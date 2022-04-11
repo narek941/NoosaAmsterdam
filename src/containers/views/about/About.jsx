@@ -1,17 +1,28 @@
 import React from "react";
 import Banner from "../../../components/common/banner";
-import About1 from "../../../img/about1.png";
-import About2 from "../../../img/about2.png";
-import About3 from "../../../img/about3.png";
-import styles from "./About.module.css";
+
+import styles from "./About.module.scss";
+import {aboutList} from '../../../utils/aboutList'
 
 const About = () => {
+  const aboutRender = aboutList.map(({id,text,title,logo})=>(
+    <div className={styles.wrapper}>
+      <div className={styles.wrapper__img}>
+      <img src={logo} alt={logo} />
+      </div>
+      <div className={styles.wrapper__text}>
+        <h3>{title} </h3>
+        <p>{text}</p>
+        </div>
+    </div>
+  ))
   return (
     <>
       <Banner />
       <section>
-        <div className={styles.aboutContainer}>
-          <label className={styles.aboutContent}>
+        <div className={styles.container}>
+          {aboutRender}
+          {/* <label className={styles.aboutContent}>
             <div className={styles.textInfo}>
               <span className={styles.textTitle}>Our Story</span>
               <div className={styles.text}>
@@ -60,7 +71,7 @@ const About = () => {
                 you like.
               </div>
             </div>
-          </label>
+          </label> */}
           </div>
       </section>
     </>

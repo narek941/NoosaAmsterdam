@@ -14,7 +14,7 @@ const BacketPop = (...props) => {
         There are no elements yet
       </div>
       <div className={styles.backetPopup_button_wrapper}>
-        <span>Total</span>
+        <p>Total</p>
         <NoosaButton
           type="popup"
           width="78px"

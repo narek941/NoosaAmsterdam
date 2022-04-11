@@ -20,10 +20,16 @@
   }
   &_button_footer{
      margin-top: 32px;
+    span{
+      font-size: 12px;
+    }
   }
 
   &_button_wrapper {
     display: flex;
+    span{
+      font-size: 12px;
+    }
     align-items: center;
     justify-content: space-between;
   }

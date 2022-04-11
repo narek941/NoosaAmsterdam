@@ -1,0 +1,45 @@
+.container{
+    margin: 80px auto;
+font-size: 16px;
+color: #3D3D3B;
+display: flex;
+flex-direction: column;
+gap: 56px;
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:nth-child(2){
+        flex-direction: row-reverse;
+    }
+    &__img{
+        max-width: 548px;
+        height: 548px;
+        width: 100%;
+    }
+    &__text{
+      
+        h3{
+            font-size: 36px;
+            line-height: 43px;
+            margin-bottom: 38px;
+
+        }
+        p{
+            max-width: 664px;
+            width: 100%;
+            text-align: center;
+            padding: 0 20px ;
+            line-height: 30px;
+
+        }
+
+    }
+}
+
+}
+
+
