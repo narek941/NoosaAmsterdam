@@ -2,14 +2,17 @@
 import React from 'react'
 import Form from './Form'
 import Info from './Info'
-import './ContactSection.css'
+import  styles from './ContactSection.module.scss'
 
 const ContactSection = () => (
   <>
-    <div className="contact-section">
+    <section >
+      <div className={styles.container}>
       <Info />
       <Form />
-    </div>
+      </div>
+     
+    </section>
   </>
 )
 export default ContactSection;

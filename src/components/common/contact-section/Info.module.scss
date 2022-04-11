@@ -1,0 +1,18 @@
+.container {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    h2{
+      font-size: 36px;
+      line-height: 32px;
+      letter-spacing: 0px;
+
+    }
+     p{
+       max-width: 334px;
+       font-size: 24px;
+     }
+  }
+  
+ 

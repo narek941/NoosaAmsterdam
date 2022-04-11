@@ -1,16 +1,16 @@
 import React from 'react'
 import NoosaButton from '../../buttons/NoosaButton'
-import './Form.css'
-
+import  styles from './Form.module.scss'
+import TextField from '@material-ui/core/TextField';
 
 const formInputs = []
 
 const Form = () => (
-  <form className="form">
-    <h2 className="form-h2">Contact form</h2>
-    <div className="input-form">
-      <input type="text" placeholder="Your name" className="form-label" />
-      <input type="text" placeholder="Your name" className="form-label" />
+  <form className={styles.container}>
+    <h2 >Contact form</h2>
+    <div className={styles.input_wrapper}>
+    <TextField  label="Your name"  />
+    <TextField  label="Your Email"  />
     </div>
     <textarea  placeholder="Message..." className="form-textarea" />
     <NoosaButton type="register" width="200px" height="51px" borderRadius="10px">
