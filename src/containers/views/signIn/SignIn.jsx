@@ -1,79 +1,64 @@
-import React, {useEffect, useState } from 'react';
-import styles from './SignIn.module.css';
-import { TypeLinks, NoosaButton } from '../../../components/buttons';
-import Tick from "../../../img/Tick";
-
+import React, { useState } from "react";
+import styles from "./SignIn.module.scss";
+import { TypeLinks, NoosaButton } from "../../../components/buttons";
+import { ReactComponent as TickIcon } from "../../../assets/Tick.svg";
+import TextField from "@material-ui/core/TextField";
+import { NavLink } from "react-router-dom";
 
 const SignIn = (...props) => {
-
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [rememberpassword, setRememberPassword] = useState(false);
-
-  function validateForm() {
-    return email.length > 0 && password.length > 0;
-  }
-
-   async function handleSubmit (event) {
-     event.preventDefault();
+  async function handleSubmit(event) {
+    event.preventDefault();
     // firebase.auth().signInWithEmailAndPassword(email, password)
     // .catch(error => console.log(error));
   }
-
+  const [remember, setRemember] = useState(false);
 
   return (
-      <div className={styles.mainStyle}>
-        <div className={styles.signInForm}>
-          <div className={styles.signInFormIn}>
-            <div className={styles.formHeader}>
-              <h1>Sign In</h1>
-              <TypeLinks type="navigationBig" to="signUp">New Customer</TypeLinks>
-            </div>
-            <form className={styles.form}>
-              <input
-                  placeholder="Email"
-                  className={styles.loginInput}
-                  autoFocus
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}/>
-              <div>
-                <input type="password"
-                       placeholder="Password"
-                       className={styles.loginInput}
-                       value={password}
-                       onChange={(e) => setPassword(e.target.value)}/>
-              </div>
-              <div className={styles.formCheck}>
-                <label className={styles.checkboxLabel}>
-                  {rememberpassword &&
-                  <span className={styles.tick}> <Tick/></span>
+    <div className={styles.container}>
+      <div className={styles.sign__wrapper}>
+        <div className={styles.sign__wrapper_header}>
+          <p>Sign In</p>
+          <TypeLinks type="navigationBig" to="signUp">
+            New Customer
+          </TypeLinks>
+        </div>
+        <form className={styles.sign__wrapper_form} onSubmit={handleSubmit}>
+          <TextField label="Email" />
+          <TextField label="password" />
 
-
-                  }
-                  <input
-                      type="checkbox"
-                      className={styles.formCheckInput}
-                      checked={rememberpassword}
-                      onChange={() => setRememberPassword(!rememberpassword)}
-                  />
-                </label>
-
-                <label className={styles.rememberMe}>Remember me</label>
-              </div>
-              <TypeLinks type="navigationBig" to="signUp">Forgot your password?</TypeLinks>
-              <span>
-              <NoosaButton>Sign In With Google</NoosaButton>
+          <div
+            className={styles.sign__wrapper_check}
+            onClick={() => setRemember(!remember)}
+          >
+            <input
+              type="checkbox"
+              id="remember"
+              name="remember"
+              checked={remember}
+            />
+            <span className={styles.sign__wrapper_check_tick}>
+              {remember && <TickIcon />}
             </span>
 
-              <NoosaButton type="submit" disabled={!validateForm()} width="430px" height="48px" borderRadius="10px">Sign
-                In</NoosaButton>
-            </form>
+            <label htmlFor="remember">remember me</label>
           </div>
-        </div>
-      </div>
-  );
+          <NavLink className={styles.sign__wrapper_link} to="forgot">
+            Forgot your password?
+          </NavLink>
 
-}
+          <NoosaButton
+            type="submit"
+            width="430px"
+            height="48px"
+            borderRadius="10px"
+            className={styles.sign__wrapper_btn}
+          >
+            Sign In
+          </NoosaButton>
+        </form>
+      </div>
+    </div>
+  );
+};
 
 export default SignIn;

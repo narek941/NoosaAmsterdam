@@ -1,1 +1,2 @@
-export { default as CloseIcon } from './CloseIcon.svg';
+export { default as CloseIcon } from "./Close.svg";
+export { default as TickIcon } from "./Tick.svg";
