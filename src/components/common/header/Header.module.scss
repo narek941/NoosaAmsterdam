@@ -8,6 +8,16 @@
     align-items: center;
     justify-content: space-between;
 
+    &_logo {
+      position: relative;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+    }
+
     &_userLine {
       display: flex;
       align-items: center;
@@ -34,7 +44,7 @@
       }
     }
   }
-  svg{
+  svg {
     width: 18px;
     height: 18px;
   }

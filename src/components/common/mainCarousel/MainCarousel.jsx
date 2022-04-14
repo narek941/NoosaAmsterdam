@@ -12,11 +12,8 @@ const MainCarousel = ({ item }) => {
         <div className={styles.slider_itemContent}>
           <h2 className={styles.slider_title}>{item.name}</h2>
           <h3 className={styles.slider_text}>{item.description}</h3>
-          <NoosaButton width="160px" height="56px" borderRadius="0px">
-            Shop Now
-          </NoosaButton>
+          <NoosaButton>Shop Now</NoosaButton>
         </div>
-       
       </section>
     </div>
   );

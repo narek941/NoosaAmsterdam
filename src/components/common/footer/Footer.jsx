@@ -1,8 +1,9 @@
 import React from "react";
-import { HeaderLogo, TypeLinks } from "../../buttons";
+import { Logo, TypeLinks } from "../../buttons";
 import styles from "./Footer.module.scss";
 import IconButton from "../../../img/IconButton";
 import { informationList, contactList, productList } from "../../../utils";
+import noosaLogo from "../../../img/noosaLogo.png";
 
 const Footer = ({ children, ...props }) => {
   const render = (data) => {
@@ -19,9 +20,11 @@ const Footer = ({ children, ...props }) => {
       <section>
         <div className={styles.footerRows}>
           <div>
-            <div className={styles.footerLogo}>
-              <HeaderLogo />
-            </div>
+            <TypeLinks
+              to={"/home"}
+              className={styles.footerLogo}
+              children={<img src={noosaLogo} alt="logo" />}
+            />
 
             <p className={styles.footerText}>
               NOOSA-Amsterdam are accessories made of high quality leather,

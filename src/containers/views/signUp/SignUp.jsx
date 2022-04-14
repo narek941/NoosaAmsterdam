@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import styles from './SignUp.module.css';
-import { TypeLinks, NoosaButton } from '../../../components/buttons';
-
+import React, { useState, useEffect } from "react";
+import styles from "./SignUp.module.scss";
+import { TypeLinks, NoosaButton } from "../../../components/buttons";
 
 const SignUp = (...props) => {
-
   // useEffect(() => {
   //   // const s = Api.getLimitItems(6);
   //   // // s.then(function (value) {
@@ -14,17 +12,12 @@ const SignUp = (...props) => {
 
   // }, []);
 
-  
-
-
   function handleSubmit(event) {
     // event.preventDefault();
     // console.log("submit")
     // firebase.auth().createUserWithEmailAndPassword(email,password)
     // .catch(error => console.log(error));
   }
-
-
 
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -50,12 +43,15 @@ const SignUp = (...props) => {
               autoFocus
               type="email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)} />
-            <input type="password"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <input
+              type="password"
               placeholder="Password"
               className={styles.signUpInput}
               value={password}
-              onChange={(e) => setPassword(e.target.value)} />
+              onChange={(e) => setPassword(e.target.value)}
+            />
             {/* <input
               placeholder="Name"
               className={styles.signUpInput}
@@ -107,14 +103,14 @@ const SignUp = (...props) => {
                 value={city}
                 onChange={(e) => setCity(e.target.value)} />
             </div> */}
-            <NoosaButton type="submit" width="200px" height="42px" borderRadius="10px">Register now</NoosaButton>
+            <NoosaButton type="submit" className={styles.button}>
+              Register now
+            </NoosaButton>
           </form>
         </div>
       </div>
     </div>
-  )
-
-
-}
+  );
+};
 
 export default SignUp;

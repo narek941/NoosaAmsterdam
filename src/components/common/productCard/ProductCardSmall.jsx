@@ -25,14 +25,7 @@ const ProductCard = (products) => {
               <IconButton type="basketOrange" />
             </span>
             <span className={styles.smallBtn}>
-              <NoosaButton
-                width="80px"
-                height="24px"
-                borderRadius="4px"
-                fontSize="10px"
-              >
-                Shop Now
-              </NoosaButton>
+              <NoosaButton>Shop Now</NoosaButton>
             </span>
           </div>
         </div>

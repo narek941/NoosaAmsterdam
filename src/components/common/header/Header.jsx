@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { HeaderLogo, TypeLinks } from "../../index";
+import { TypeLinks } from "../../index";
 import IconButton from "../../../img/IconButton";
+import noosaLogo from "../../../img/noosaLogo.png";
+
 import SignPopup from "../popup/SignPop";
 import BacketPopup from "../popup/BacketPop";
 import { navigationList } from "../../../utils";
@@ -11,7 +13,7 @@ const Header = ({ children, ...props }) => {
   const [showBacketPopup, setShowBacketPopup] = useState(false);
 
   const renderNav = navigationList.map((item) => (
-    <TypeLinks key={item.id} type="navigation" to={item.name}>
+    <TypeLinks key={item.id} to={item.name}>
       {item.name}
     </TypeLinks>
   ));
@@ -20,9 +22,11 @@ const Header = ({ children, ...props }) => {
       <div className={styles.header}>
         <section>
           <div className={styles.header__container}>
-            <div>
-              <HeaderLogo type="header" to={"/home"} />
-            </div>
+            <TypeLinks
+              to={"/home"}
+              className={styles.header__container_logo}
+              children={<img src={noosaLogo} alt="logo" />}
+            />
 
             <nav>{renderNav}</nav>
 
@@ -45,7 +49,6 @@ const Header = ({ children, ...props }) => {
               <div onClick={() => setShowSignPopup(!showSignPopup)}>
                 <IconButton type="user" />
               </div>
-            
             </div>
             {showSignPopup ? <SignPopup /> : null}
             {showBacketPopup ? <BacketPopup /> : null}

@@ -1,56 +1,16 @@
 import React from "react";
-import { Button } from "@material-ui/core";
-import { NavLink as RouterNavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import classNames from "classnames";
+import styles from "./button.module.scss";
 
-const TypeLinks = ({ type, to, children, ...props }) => {
-  const mystyleDefault = {
-    textTransform: "capitalize",
-    color: "#F5F3F2",
-    justifyContent: "start",
-    padding: 0,
-  };
+const TypeLinks = ({ to, children, className }) => {
+  const classes = classNames(className, styles.link);
 
-  const mystyle = {
-    textTransform: "capitalize",
-    color: "#F5F3F2",
-    justifyContent: "center",
-    padding: "5px 16px",
-    textAlign: "center",
-  };
-  const mystyleBig = {
-    opacity: 1,
-    textTransform: "capitalize",
-    color: "#F5F3F2",
-    justifyContent: "center",
-    fontSize: "24px",
-  };
-
-  switch (type) {
-    case "navigation":
-      return (
-        <Button style={mystyle} component={RouterNavLink} to={to}>
-          {children}
-        </Button>
-      );
-    case "navigationBig":
-      return (
-        <Button style={mystyleBig} component={RouterNavLink} to={to}>
-          {children}
-        </Button>
-      );
-    case "footer":
-      return (
-        <Button style={mystyleDefault} component={RouterNavLink} to={to}>
-          {children}
-        </Button>
-      );
-    default:
-      return (
-        <Button style={mystyle} color="inherit">
-          {children}
-        </Button>
-      );
-  }
+  return (
+    <Link className={classes} to={to}>
+      {children}
+    </Link>
+  );
 };
 
 export default TypeLinks;

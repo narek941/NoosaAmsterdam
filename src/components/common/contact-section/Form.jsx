@@ -11,14 +11,7 @@ const Form = () => (
       <TextField label="Your Email" />
     </div>
     <textarea placeholder="Message..." className="form-textarea" />
-    <NoosaButton
-      type="register"
-      width="200px"
-      height="51px"
-      borderRadius="10px"
-    >
-      Send
-    </NoosaButton>
+    <NoosaButton type="submit">Send</NoosaButton>
   </form>
 );
 

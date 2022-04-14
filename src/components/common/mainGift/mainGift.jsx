@@ -11,9 +11,7 @@ const MainGift = (props) => {
           gifts.
         </div>
         <div className={styles.container__content_button}>
-          <NoosaButton width="160px" height="56px" borderRadius="4px">
-            Buy Now
-          </NoosaButton>
+          <NoosaButton>Buy Now</NoosaButton>
         </div>
       </div>
     </div>

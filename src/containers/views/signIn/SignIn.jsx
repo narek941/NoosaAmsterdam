@@ -18,9 +18,7 @@ const SignIn = (...props) => {
       <div className={styles.sign__wrapper}>
         <div className={styles.sign__wrapper_header}>
           <p>Sign In</p>
-          <TypeLinks type="navigationBig" to="signUp">
-            New Customer
-          </TypeLinks>
+          <TypeLinks to="signUp">New Customer</TypeLinks>
         </div>
         <form className={styles.sign__wrapper_form} onSubmit={handleSubmit}>
           <TextField label="Email" />
@@ -46,13 +44,7 @@ const SignIn = (...props) => {
             Forgot your password?
           </NavLink>
 
-          <NoosaButton
-            type="submit"
-            width="430px"
-            height="48px"
-            borderRadius="10px"
-            className={styles.sign__wrapper_btn}
-          >
+          <NoosaButton type="submit" className={styles.sign__wrapper_btn}>
             Sign In
           </NoosaButton>
         </form>

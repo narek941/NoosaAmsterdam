@@ -21,9 +21,7 @@ const ProductCard = ({ id, img, title, price }) => {
             <IconButton type="basketOrange" />
           </span>
           <span className={styles.card__info_actions_btn}>
-            <NoosaButton width="112px" height="36px" borderRadius="4px">
-              Shop Now
-            </NoosaButton>
+            <NoosaButton>Shop Now</NoosaButton>
           </span>
         </div>
       </div>
