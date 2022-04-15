@@ -20,9 +20,9 @@ const ProductCard = ({ id, img, title, price }) => {
           <span className={styles.card__info_actions_basket}>
             <IconButton type="basketOrange" />
           </span>
-          <span className={styles.card__info_actions_btn}>
-            <NoosaButton>Shop Now</NoosaButton>
-          </span>
+          <NoosaButton className={styles.card__info_actions_button}>
+            Shop Now
+          </NoosaButton>
         </div>
       </div>
       <span className={styles.card__like}>

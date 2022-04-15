@@ -12,7 +12,7 @@ const MainCarousel = ({ item }) => {
         <div className={styles.slider_itemContent}>
           <h2 className={styles.slider_title}>{item.name}</h2>
           <h3 className={styles.slider_text}>{item.description}</h3>
-          <NoosaButton>Shop Now</NoosaButton>
+          <NoosaButton className={styles.slider_button}>Shop Now</NoosaButton>
         </div>
       </section>
     </div>

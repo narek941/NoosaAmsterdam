@@ -11,9 +11,8 @@
     flex-direction: column;
     top: 50%;
     right: 0;
-    position:absolute;
+    position: absolute;
     transform: translateY(-50%);
-
 
     &_text {
       padding: 23px 50px 25px 35px;
@@ -32,9 +31,9 @@
 
     &_button {
       margin-top: 16px;
-      display: flex;
-      justify-content: start;
-
+      width: 160px;
+      height: 56px;
+      border-radius: 4px;
     }
   }
 }

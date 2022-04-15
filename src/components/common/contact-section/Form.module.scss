@@ -1,29 +1,32 @@
-.container{
+.container {
   display: flex;
   flex-direction: column;
   gap: 55px;
-  
-  h2{
+
+  h2 {
     font-size: 36px;
     text-align: left;
     line-height: 32px;
     letter-spacing: 0px;
   }
-  .input_wrapper{
+  .input_wrapper {
     display: flex;
     gap: 100px;
     width: 648px;
 
-    input{
-    width: 230px;
-    text-align: left;
-    font-size: 12px !important;
-    line-height: 16px;
-
+    &_button {
+      width: 200px !important;
+      border-radius: 10px !important;
+      height: 51px !important;
     }
-      
+    input {
+      width: 230px;
+      text-align: left;
+      font-size: 12px !important;
+      line-height: 16px;
+    }
   }
-  textarea{
+  textarea {
     width: 648px;
     background: #686261;
     text-align: left;
@@ -31,7 +34,7 @@
     min-height: 200px;
     border-radius: 10px;
     padding: 16px;
-    color: #F5F3F2;
+    color: #f5f3f2;
     resize: none;
   }
 }

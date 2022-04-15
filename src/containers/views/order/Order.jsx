@@ -117,7 +117,9 @@ const Order = (...props) => {
               </label>
             </div>
 
-            <NoosaButton>Checkout</NoosaButton>
+            <NoosaButton className={styles.check_wrapper_button}>
+              Checkout
+            </NoosaButton>
           </div>
         </div>
         <div className={styles.delivery__wrapper}>

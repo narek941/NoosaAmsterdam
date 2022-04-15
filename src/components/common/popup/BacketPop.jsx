@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./BacketPop.module.scss";
-import { TypeLinks } from "../../buttons";
+import { NoosaButton } from "../../buttons";
 import classNames from "classnames";
 
 const BacketPop = (...props) => {
@@ -15,11 +15,21 @@ const BacketPop = (...props) => {
       </div>
       <div className={styles.backetPopup_button_wrapper}>
         <p>Total</p>
-        <TypeLinks to="/basket">0$</TypeLinks>
+        <span>0$</span>
       </div>
       <div className={footerClassnames}>
-        <TypeLinks to="/basket">close</TypeLinks>
-        <TypeLinks to="/order">Checkout</TypeLinks>
+        <NoosaButton
+          className={styles.backetPopup_button_footer_button}
+          to="/basket"
+        >
+          close
+        </NoosaButton>
+        <NoosaButton
+          className={styles.backetPopup_button_footer_button}
+          to="/order"
+        >
+          Checkout
+        </NoosaButton>
       </div>
     </div>
   );
