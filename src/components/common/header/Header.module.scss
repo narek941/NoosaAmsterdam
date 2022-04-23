@@ -1,6 +1,6 @@
 .header {
   background-color: #7a7674;
-  padding: 12px;
+  padding: 12px 0;
   position: static;
 
   &__container {
@@ -16,6 +16,10 @@
       justify-content: center;
       align-items: center;
       gap: 32px;
+
+      @media screen and (max-width: 992px) {
+        display: none;
+      }
     }
 
     &_userLine {
@@ -24,6 +28,9 @@
       justify-content: space-between;
       gap: 40px;
 
+      @media screen and (max-width: 992px) {
+        display: none;
+      }
       div {
         cursor: pointer;
       }
@@ -43,9 +50,16 @@
         }
       }
     }
+    &__burger{
+      display: none;
+      @media screen and (max-width: 992px) {
+        display: block;
+      }
+    }
   }
   svg {
     width: 18px;
     height: 18px;
   }
 }
+

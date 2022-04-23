@@ -6,7 +6,7 @@ const Home = (props) => {
 
   return (
     <>
-            <MainCarouselContainer />
+            <MainCarouselContainer /> 
             <ProductListContainer />
             <MainGift />
     </>

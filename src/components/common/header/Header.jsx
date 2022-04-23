@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { TypeLinks } from "../../index";
 import IconButton from "../../../img/IconButton";
 import noosaLogo from "../../../img/noosaLogo.png";
-
+import Burger from '../burger'
 import SignPopup from "../popup/SignPop";
 import BacketPopup from "../popup/BacketPop";
 import { navigationList } from "../../../utils";
@@ -28,7 +28,7 @@ const Header = ({ children, ...props }) => {
               children={<img src={noosaLogo} alt="logo" />}
             />
 
-            <nav>{renderNav}</nav>
+            <nav className={styles.header__container_nav}>{renderNav}</nav>
 
             <div className={styles.header__container_userLine}>
               <div>
@@ -52,6 +52,8 @@ const Header = ({ children, ...props }) => {
             </div>
             {showSignPopup ? <SignPopup /> : null}
             {showBacketPopup ? <BacketPopup /> : null}
+            <span className={styles.header__container__burger}><Burger/></span>
+            
             {children}
           </div>
         </section>

@@ -12,7 +12,7 @@ const MainCarouselContainer = (props) => {
   return !props.carousel ? (
     <>Loading</>
   ) : (
-    <Carousel>
+    <Carousel autoPlay={false}>
       {props.carousel.map((item, i) => (
         <MainCarousel item={item} key={i} />
       ))}

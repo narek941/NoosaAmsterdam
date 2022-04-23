@@ -8,8 +8,8 @@ import { NavLink } from "react-router-dom";
 const ProductCard = ({ id, img, title, price }) => {
   return (
     <div className={styles.card}>
-      <NavLink to={"productDetail/id=" + id}>
-        <img className={styles.card__img} src={img} alt="img" />
+      <NavLink to={"productDetail/id=" + id } className={styles.card__img} >
+        <img  src={img} alt="img" />
       </NavLink>
       <div className={styles.card__info}>
         <div className={styles.card__info_text}>

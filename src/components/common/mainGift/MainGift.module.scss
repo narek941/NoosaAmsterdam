@@ -5,14 +5,22 @@
   background-position: center;
   height: 453px;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+
+  @media screen and (max-width: 992px) {
+    height: 300px;
+  }
+
+  @media screen and (max-width: 576px) {
+    height: 150px;
+  }
 
   &__content {
     display: flex;
-    flex-direction: column;
-    top: 50%;
-    right: 0;
-    position: absolute;
-    transform: translateY(-50%);
+      justify-content: end;
+      flex-direction: column;
 
     &_text {
       padding: 23px 50px 25px 35px;
@@ -27,6 +35,21 @@
       color: #f5f3f2;
       font-size: 29px;
       font-weight: 600;
+
+      @media screen and (max-width: 992px) {
+        font-size: 24px;
+        max-width: 500px;
+        line-height: 30px;
+        padding: 10px ;
+
+      }
+      @media screen and (max-width: 576px) {
+        max-width: 220px;
+        font-size: 12px;
+        line-height: 16px;
+
+      }
+    
     }
 
     &_button {
@@ -34,6 +57,18 @@
       width: 160px;
       height: 56px;
       border-radius: 4px;
+      
+      @media screen and (max-width: 992px) {
+        width: 80px;
+        height: 37px;
+        font-size: 12px;
+      }
+      @media screen and (max-width: 576px) {
+        width: 60px;
+        height: 24px;
+        font-size: 8px;
+
+      }
     }
   }
 }

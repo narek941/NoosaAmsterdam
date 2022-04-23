@@ -1,5 +1,5 @@
 import React from "react";
-import { Logo, TypeLinks } from "../../buttons";
+import { TypeLinks } from "../../buttons";
 import styles from "./Footer.module.scss";
 import IconButton from "../../../img/IconButton";
 import { informationList, contactList, productList } from "../../../utils";
@@ -8,7 +8,7 @@ import noosaLogo from "../../../img/noosaLogo.png";
 const Footer = ({ children, ...props }) => {
   const render = (data) => {
     return data.map((item) => (
-      <li className={styles.liStyle} key={item.id}>
+      <li className={styles.footer__ul__li} key={item.id}>
         <TypeLinks type={item.type} to={item.name}>
           {item.text}
         </TypeLinks>
@@ -16,44 +16,44 @@ const Footer = ({ children, ...props }) => {
     ));
   };
   return (
-    <div className={styles.footerContainer}>
+    <div className={styles.footer}>
       <section>
-        <div className={styles.footerRows}>
-          <div>
+        <div className={styles.footer__rows}>
+          <div className={styles.footer__rows__item}>
             <TypeLinks
               to={"/home"}
-              className={styles.footerLogo}
+              className={styles.footer__rows__logo}
               children={<img src={noosaLogo} alt="logo" />}
             />
 
-            <p className={styles.footerText}>
+            <p className={styles.footer__rows__text}>
               NOOSA-Amsterdam are accessories made of high quality leather,
               decorated with handmade buttons.
             </p>
           </div>
-          <div>
-            <h3 className={styles.footerHeader}>Information</h3>
-            <ul className={styles.ulStyle}>{render(informationList)}</ul>
+          <div  className={styles.footer__rows__item}>
+            <h3 className={styles.footer__header}>Information</h3>
+            <ul className={styles.footer__ul}>{render(informationList)}</ul>
           </div>
 
-          <div>
-            <h3 className={styles.footerHeader}>Products</h3>
-            <ul className={styles.ulStyle}>{render(productList)}</ul>
+          <div  className={styles.footer__rows__item}>
+            <h3 className={styles.footer__header}>Products</h3>
+            <ul className={styles.footer__ul}>{render(productList)}</ul>
           </div>
-          <div>
-            <h3 className={styles.footerHeader}>Contacts</h3>
-            <ul className={styles.ulStyle}>{render(contactList)}</ul>
+          <div  className={styles.footer__rows__item}>
+            <h3 className={styles.footer__header}>Contacts</h3>
+            <ul className={styles.footer__ul}>{render(contactList)}</ul>
 
-            <div className={styles.subscribeContent}>
-              <div className={styles.subscribe}>
-                <span className={styles.social}>
+            <div className={styles.footer__subscribe__wrapper}>
+              <div className={styles.footer__subscribe}>
+                <span className={styles.footer__subscribe__social}>
                   <IconButton type="fb" />
                 </span>
-                <span className={styles.social}>
+                <span className={styles.footer__subscribe__social}>
                   <IconButton type="insta" />
                 </span>
               </div>
-              <form className={styles.subscribe__input}>
+              <form className={styles.footer__form}>
                 <input type="text" placeholder="Enter Email Address" />
                 <button>Subscribe</button>
               </form>

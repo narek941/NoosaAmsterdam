@@ -9,10 +9,12 @@ const MainCarousel = ({ item }) => {
       style={{ backgroundImage: `url(${item.img})` }}
     >
       <section>
-        <div className={styles.slider_itemContent}>
-          <h2 className={styles.slider_title}>{item.name}</h2>
-          <h3 className={styles.slider_text}>{item.description}</h3>
-          <NoosaButton className={styles.slider_button}>Shop Now</NoosaButton>
+        <div  className={styles.slider__wrapper}>
+          <div className={styles.slider_itemContent}>
+            <h2 className={styles.slider_title}>{item.name}</h2>
+            <h3 className={styles.slider_text}>{item.description}</h3>
+            <NoosaButton className={styles.slider_button}>Shop Now</NoosaButton>
+          </div>
         </div>
       </section>
     </div>
