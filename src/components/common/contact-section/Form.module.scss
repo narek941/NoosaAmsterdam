@@ -3,21 +3,40 @@
   flex-direction: column;
   gap: 55px;
 
+  @media screen and (max-width: 576px) {
+    gap: 20px;
+  }
+
   h2 {
     font-size: 36px;
     text-align: left;
     line-height: 32px;
     letter-spacing: 0px;
+
+    @media screen and (max-width: 576px) {
+      font-size: 24px;
+      line-height: 30px;
+    }
   }
   .input_wrapper {
     display: flex;
     gap: 100px;
     width: 648px;
 
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+      gap: 30px;
+      width: 100%;
+    }
+
     &_button {
       width: 200px !important;
       border-radius: 10px !important;
       height: 51px !important;
+
+      @media screen and (max-width: 992px) {
+        margin: 0 auto;
+      }
     }
     input {
       width: 230px;
@@ -36,5 +55,9 @@
     padding: 16px;
     color: #f5f3f2;
     resize: none;
+
+    @media screen and (max-width: 992px) {
+      width: 100%;
+    }
   }
 }

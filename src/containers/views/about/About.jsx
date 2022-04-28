@@ -1,12 +1,11 @@
 import React from "react";
-import Banner from "../../../components/common/banner";
 
 import styles from "./About.module.scss";
 import { aboutList } from "../../../utils/aboutList";
 
 const About = () => {
   const aboutRender = aboutList.map(({ id, text, title, logo }) => (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} key={id}>
       <div className={styles.wrapper__img}>
         <img src={logo} alt={logo} />
       </div>
@@ -18,7 +17,11 @@ const About = () => {
   ));
   return (
     <>
-      <Banner />
+      <div className={styles.banner}>
+        <section>
+          <div className={styles.banner__content}>Noosa Amsterdam </div>
+        </section>
+      </div>
       <section>
         <div className={styles.container}>{aboutRender}</div>
       </section>

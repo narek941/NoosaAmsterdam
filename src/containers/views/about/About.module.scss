@@ -1,45 +1,103 @@
-.container{
-    margin: 80px auto;
-font-size: 16px;
-color: #3D3D3B;
-display: flex;
-flex-direction: column;
-gap: 56px;
+.container {
+  margin: 80px auto;
+  font-size: 16px;
+  color: #3d3d3b;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
 
-.wrapper{
+  @media screen and (max-width: 992px) {
+    margin: 40px auto;
+  }
+
+  @media screen and (max-width: 576px) {
+    margin: 20px auto;
+  }
+
+  .wrapper {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    &:nth-child(2){
-        flex-direction: row-reverse;
+    @media screen and (max-width: 992px) {
+      align-items: unset;
     }
-    &__img{
-        max-width: 548px;
-        height: 548px;
+
+    @media screen and (max-width: 576px) {
+      flex-direction: column;
+    }
+
+    &:nth-child(2) {
+      flex-direction: row-reverse;
+      @media screen and (max-width: 576px) {
+        flex-direction: column;
+      }
+    }
+
+    &__img {
+      max-width: 548px;
+      max-height: 548px;
+      width: 100%;
+    }
+    &__text {
+      h3 {
+        font-size: 36px;
+        line-height: 43px;
+        margin-bottom: 38px;
+        font-weight: 600;
+
+        @media screen and (max-width: 992px) {
+          font-size: 24px;
+          line-height: 30px;
+          margin-bottom: 10px;
+        }
+      }
+      p {
+        max-width: 664px;
         width: 100%;
-    }
-    &__text{
-      
-        h3{
-            font-size: 36px;
-            line-height: 43px;
-            margin-bottom: 38px;
-            font-weight: 600;
-
+        text-align: center;
+        padding: 0 20px;
+        line-height: 30px;
+        @media screen and (max-width: 992px) {
+          font-size: 16px;
+          line-height: 20px;
         }
-        p{
-            max-width: 664px;
-            width: 100%;
-            text-align: center;
-            padding: 0 20px ;
-            line-height: 30px;
-        }
-
+      }
     }
+  }
 }
 
+.banner {
+  background-image: url(../../../img/banner_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 648px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+
+  @media screen and (max-width: 1300px) {
+    height: 400px;
+  }
+
+  @media screen and (max-width: 992px) {
+    height: 300px;
+  }
+
+  @media screen and (max-width: 576px) {
+    height: 150px;
+  }
+  &__content {
+    text-align: center;
+    font: normal normal bold 54px/65px Roboto;
+    letter-spacing: 0px;
+    color: #f5f3f2;
+
+    @media screen and (max-width: 576px) {
+      font: normal normal bold 30px Roboto;
+    }
+  }
 }
-
-
